@@ -1,0 +1,139 @@
+# Configuration KingdomSMP — commentaires en français
+settings:
+  langue: fr
+  attribution-automatique: true
+  intervalle-sauvegarde-secondes: 60
+  anti-farm-secondes: 300
+  cooldown-pouvoir-secondes: 30
+  cooldown-affichage: ACTION_BAR
+  activation:
+    commandes: true
+    # Ouvre le menu des pouvoirs avec Shift + clic droit. Désactivé par défaut.
+    shift-clic-droit-menu: false
+    clic-droit-pouvoir: false
+    pouvoir-clic-droit: 1
+  spawn:
+    protection-active: true
+    monde: world
+    x: 0
+    z: 0
+    rayon: 100
+  worldguard:
+    bloquer-dans-regions-pvp-deny: true
+
+progression:
+  couronnes-normales: [3, 5, 8]
+  couronnes-legendaires: [3, 5, 8, 12, 15]
+
+couronnes:
+  Nature:
+    passif: biome
+    effets-biomes:
+      PLAINS: SPEED:1
+      FOREST: JUMP_BOOST:1
+      JUNGLE: REGENERATION:1
+      DESERT: FIRE_RESISTANCE:1
+      SNOWY_PLAINS: RESISTANCE:1
+      NETHER_WASTES: FIRE_RESISTANCE:1
+      THE_END: SLOW_FALLING:1
+  Wrath:
+    passif: STRENGTH:1
+  Heaven:
+    passif: RESISTANCE:1
+    anti-degats-chute: true
+  Gl1tched:
+    passif: effet-positif-aleatoire
+    intervalle-secondes: 600
+  Adaptation:
+    passif: RESISTANCE:1
+    coups-recus-par-palier: 10
+    duree-palier-secondes: 30
+    niveau-max-resistance: 4
+  Wealth:
+    passifs: [HERO_OF_THE_VILLAGE:5, LUCK:5]
+  Fractionate:
+    passif: SPEED:2
+  Void:
+    passifs: [WEAVING:1, HASTE:1]
+  Parade:
+    passif: FIRE_RESISTANCE:1
+  King:
+    passif: absorption-de-couronne
+  Tyrannus:
+    passifs: [STRENGTH:1, SPEED:3, RESISTANCE:2]
+  Hériclés:
+    passifs: [STRENGTH:2, SPEED:2, FIRE_RESISTANCE:1]
+
+messages:
+  prefixe: '&5&lKingdom &8» '
+  couronne-attribuee: '&aTa couronne : &e{couronne}&a.'
+  aucune-couronne: '&cTu ne possèdes aucune couronne.'
+  permission-refusee: '&cTu n''as pas la permission.'
+  aide: '&e/kingdom me | powers | crown <joueur> <nom> | remove <joueur> | ritual <joueur> <nom> | save'
+
+# Durabilité des couronnes (les matériaux représentent leurs vies)
+couronne-durabilite:
+  vies-initiales: 10
+  vies-max: 10
+  seuil-fracture: 3 # à 3 Materials Left, seules les capacités actives sont désactivées
+  perte-vie-a-la-mort: true
+  perte-vie-intervalle-secondes: 21600 # 6 heures en ligne
+  delai-casse-secondes: 86400 # après 24 h à 0 vie, la couronne se brise complètement
+  vies-apres-reparation: 10
+materiaux:
+  recompense-kill-activee: true
+  par-kill: 1
+  vies-par-materiau: 2
+  cout-reparation: 3
+
+# Cooldowns individuels optionnels en secondes. Si une valeur manque, settings.cooldown-pouvoir-secondes est utilisé.
+cooldowns:
+  Wrath:
+    1: 30
+    2: 35
+    3: 45
+  King:
+    1: 35
+    2: 45
+    3: 50
+    4: 60
+    5: 90
+
+# Restauration d'une couronne absorbée par King : pacte administratif + objectifs configurables.
+pacte:
+  eliminations-requises: 10
+  materiaux-requis: 5
+
+# Équilibrage PvP
+combat:
+  mace-smash-limit:
+    enabled: true
+    # Santé minimale conservée par la cible (2.0 = un cœur).
+    minimum-health: 2.0
+    # Hauteur de chute minimale pour considérer le coup comme une frappe plongeante.
+    minimum-fall-distance: 1.5
+
+# Événements aléatoires liés aux couronnes : un événement démarre toutes les 3 heures.
+# Chaque événement dure 15 minutes et le type est choisi aléatoirement parmi 5 défis très difficiles.
+evenements-couronnes:
+  actifs: true
+  intervalle-evenements-secondes: 10800 # 3 heures entre deux événements
+  duree-secondes: 900 # 15 minutes pour réussir le défi
+  minerais-requis: 512
+  monstres-requis: 200
+  poissons-requis: 128
+  recoltes-requises: 384
+  buches-requises: 768
+  recompense-materiaux: 10
+
+# Rituels légendaires : les offrandes sont consommées au démarrage, le catalyseur à la réussite.
+# Chaque rituel dure au minimum 60 secondes. Par défaut, les rituels durent 120 secondes.
+rituels:
+  duree-secondes: 120
+  consommer-catalyseur-a-la-fin: true
+  distance-maximale-blocs: 3
+  interruption-si-degats: true
+  offrandes:
+    King: [TOTEM_OF_UNDYING:4, ECHO_SHARD:16, GOLD_BLOCK:8, DRAGON_HEAD:1]
+    Tyrannus: [NETHERITE_BLOCK:1, WITHER_SKELETON_SKULL:8, BLAZE_ROD:32, ANCIENT_DEBRIS:16]
+    Hericles: [HEAVY_CORE:1, ENCHANTED_GOLDEN_APPLE:4, HEART_OF_THE_SEA:4, TOTEM_OF_UNDYING:2]
