@@ -1,0 +1,594 @@
+# VortexEssentials — by ItsVany
+
+# Langue des textes : fr, en, es (fichiers plugins/VortexEssentials/lang/<code>.txt ; /vortex lang <code>)
+language: fr
+# Les données gérées par les menus (enchantements, potions, bypass) sont dans limits.yml.
+# Le registre des armes mythiques déjà forgées est dans mythic-data.yml.
+
+limit:
+  enforce-on-enchanting: true
+  enforce-on-anvil: true
+  enforce-on-inventory: true
+  # Désactivé par défaut : dans VortexLimit 2.2.0 ce réglage n'avait aucun effet.
+  # Si activé, ne s'applique qu'aux potions bues, lancées, nuages et flèches teintées
+  # (pas aux effets de balise, de raid, de warden, etc.).
+  enforce-potions: false
+  bypass:
+    individual-items: true
+    permanent-material-types: true
+    custom-object-ids: true
+    vortex-items: true            # items Vortex (mythiques, légendaires, outils) exemptés des limites d'enchantements
+
+mythic:
+  forge-once: true          # une arme mythique ne peut être forgée qu'une seule fois par serveur
+  one-per-player: true      # un joueur ne porte qu'une seule arme mythique
+  block-containers: true    # interdit de les ranger (coffres, ender chest, entonnoirs, bundles...)
+
+# ───────── Outils mythiques (Fractured, Terraloop, Jugas) ─────────
+# Réglables par outil dans le menu (sneak + clic droit) : zone, autosmelt, abattage d'arbres, vitesse vanilla.
+mythic-tools:
+  size: 3               # zone cubique, nombre impair : 3 = 3x3x3, 5 = 5x5x5 (max 9)
+  instant-break: true   # casse tous les blocs instantanément (désactivable outil par outil : "vitesse vanilla")
+  haste-level: 0        # Hâte en main (0 = aucune)
+
+# ───────── Armes mythiques : capacités (cooldowns en secondes) ─────────
+mythic-weapons:
+  sealord:
+    effects:                    # effets permanents : <effet>: <niveau>
+      regeneration: 2
+      strength: 1
+      conduit_power: 1
+      resistance: 2
+      dolphins_grace: 1
+    water-effects:              # effets en plus tant que le porteur est dans l'eau
+      water_breathing: 1
+    water-attack-damage: 0    # +2 dégâts d'attaque tant que le porteur est dans l'eau (attribut, remplace la Force)
+    regen-in-water: true        # false = désactive aussi water-effects et le bonus de dégâts
+    tidal-slam:                 # sneak + clic gauche
+      cooldown: 20
+      radius: 6
+      knockback: 1.6
+      slow-seconds: 5
+    maelstrom:                  # sneak + clic droit
+      cooldown: 60
+      radius: 10
+      duration: 5
+      damage-per-second: 4
+      fatigue-seconds: 8
+  lightspeed:
+    effects:
+      speed: 3
+      weaving: 3
+      resistance: 1
+    dash:                       # clic droit
+      cooldown: 8
+      power: 2.2
+    sonic-slash:                # sneak + clic droit
+      cooldown: 45
+      range: 7
+      damage: 16
+      angle: 45
+      resistance-seconds: 2
+  mintus:
+    effects:                    # effets permanents : <effet>: <niveau>
+      hero_of_the_village: 256
+      resistance: 2
+      fire_resistance: 1
+    regen-villager-radius: 10
+    rallying-cheer:             # sneak + clic gauche
+      cooldown: 30
+      radius: 12
+      seconds: 15
+      attack-damage: 4.0        # bonus de dégâts d'attaque des alliés (attribut, remplace la Force II)
+    villagers-wrath:            # sneak + clic droit
+      cooldown: 60
+      radius: 10
+      damage: 15
+      knockback: 1.5
+  skyfall:                      # arc mythique
+    effects:                    # effets permanents : <effet>: <niveau>
+      speed: 2
+      regeneration: 1
+      resistance: 1
+    pierce: 3                   # cibles traversées par une flèche pleine puissance
+    speed-multiplier: 1.25      # vitesse des flèches pleine puissance
+    rain:                       # Arrow Rain : sneak + clic gauche, sur la cible visée
+      cooldown: 40
+      range: 45
+      radius: 5
+      arrows: 40
+      damage: 6
+      duration-ticks: 60
+  voidrender:                   # arbalète mythique
+    effects:                    # effets permanents : <effet>: <niveau>
+      fire_resistance: 1
+      strength: 1
+      weaving: 1
+    pierce: 5
+    speed-multiplier: 1.15
+    rail:                       # Rail Shot : sneak + clic gauche (rayon perforant, brise les boucliers)
+      cooldown: 30
+      range: 45
+      damage: 18
+    blink:                      # Blink Bolt : tirer en sneak, vous vous téléportez à l'impact
+      cooldown: 20
+  stormpiercer:                 # lance mythique (base netherite spear)
+    effects:                    # effets permanents (inventaire)
+      strength: 1
+      speed: 1
+      jump_boost: 1
+    javelin:                    # Thunder Javelin : sneak + clic droit
+      cooldown: 14
+      range: 40
+      damage: 14
+      lightning-damage: 6
+    dash:                       # Skewer Dash : touche d'échange de main (F)
+      cooldown: 18
+      speed: 2.4
+      damage: 12
+    static-charge:              # passif : tous les N coups, foudre en chaîne autour de la cible
+      every: 4
+      radius: 5
+      damage: 8
+  umbral-scythe:                # arme secrète (base mace) : catégorie Secret Weapons
+    effects:                    # effets permanents (inventaire)
+      resistance: 2
+      strength: 2
+      fire_resistance: 1
+      speed: 2
+      weaving: 1
+    leap:                       # Eclipse Leap : sneak + clic droit
+      cooldown: 16
+      height: 2.2               # puissance du bond (vers le haut)
+      forward: 1.1              # distance en avant
+      takeoff-radius: 5         # éclipse au décollage : dégâts, cécité et projection autour de vous
+      takeoff-damage: 8
+      blind-seconds: 3
+      slam-radius: 7            # écrasement à l'atterrissage
+      slam-damage: 14
+      slam-launch: 1.1
+    chains:                     # Reaper Chains : sneak + clic gauche, 3 charges libres enchaînées
+      cooldown: 20              # démarre à la 1re charge
+      window: 6                 # secondes pour enchaîner les 3 charges
+      range: 25                 # portée de détection d'une entité ou d'un bloc
+      free-distance: 14         # sans cible : distance parcourue droit devant
+      min-speed: 1.4
+      max-speed: 2.8
+      damage: 10                # dégâts à l'entité accrochée (10 PV = 5 cœurs)
+      shockwave:                # chaîne plantée dans un bloc : onde de choc
+        radius: 5
+        damage: 10
+        launch: 0.8
+    shatterer:                  # Shatterer : touche d'échange de main (F) — onde de choc qui projette en l'air
+      cooldown: 25
+      radius: 10
+      damage: 24                # 24 PV = 12 cœurs au centre, la moitié au bord
+      stun-seconds: 2.5         # paralysie (Lenteur V)
+      launch: 2.0               # projection verticale des ennemis
+      self-launch: 0.9          # le porteur s'élève aussi (pour enchaîner un smash de mace)
+
+
+# ───────── Outils ─────────
+tools:
+  explosive-pickaxe-size: 2     # Explosive Pickaxe : zone cubique (2 = 2x2x2, étendue dans le sens du regard)
+  netherite-explosive-pickaxe-size: 3   # Netherite Explosive Pickaxe : 3 = 3x3x3 centré
+  lumberjack-max-blocks: 256    # rondins max par arbre
+  super-smelter-haste: 1        # Haste de la Super/Netherite Smelter's Pickaxe (0 = aucun)
+  vanilla-speed-default: false  # true : les nouveaux outils démarrent en « vitesse de minage vanilla »
+
+# ───────── Armes légendaires ─────────
+legendary:
+  reaper-scythe:
+    cooldown: 45
+    drain-percent: 25           # % des PV actuels de la cible
+    harvest:                    # Moisson d'âmes : sneak + clic droit, draine tous les ennemis proches
+      cooldown: 35
+      radius: 6
+      damage: 4
+      wither-seconds: 4
+      heal-percent: 50          # % des dégâts infligés rendus en PV
+  excalibur:
+    cooldown: 45
+    hits: 8                     # coups annulés
+    seconds: 10
+  evoker-wand:
+    fangs-cooldown: 12          # sneak + clic gauche
+    fang-length: 8
+    reflect-cooldown: 25        # clic droit
+    reflect-seconds: 8
+    reflect-radius: 5
+  chrono-sword:
+    cooldown: 50
+    death-cooldown: 100         # si le rembobinage a évité la mort
+  sceptre-of-arachne:
+    web-radius: 2.0             # les toiles disparaissent dans ce rayon autour du porteur (et devant lui)
+    shot-cooldown: 2            # clic droit : tir normal
+    empower-cooldown: 20        # sneak + clic gauche
+    range: 20
+    shot-damage: 4
+    web-chance: 25              # % de poser une toile sur un tir normal
+    web-radius: 2
+    web-seconds: 10
+    spiders: 6
+    spider-seconds: 15
+  magma-club:
+    ignite-chance: 35
+    fire-seconds: 5
+    eruption:                   # sneak + clic gauche : enflamme et projette les ennemis proches
+      cooldown: 20
+      radius: 5
+      damage: 6
+      fire-seconds: 5
+    wave:                       # sneak + clic droit : ligne de feu devant vous
+      cooldown: 35
+      range: 10
+      damage: 8
+      fire-seconds: 6
+  blazing-crossbow:
+    barrage:                    # sneak + clic gauche : volée de flèches enflammées
+      cooldown: 25
+      arrows: 5
+      spread: 6                 # degrés entre deux flèches
+    explosive-every: 4          # tous les N tirs, le carreau explose à l'impact (0 = jamais)
+    explosion-power: 2.0        # sans dégâts aux blocs ni feu
+
+# ───────── Boosts par groupe (LuckPerms) ─────────
+# Un joueur reçoit le boost s'il possède la permission du groupe. Avec LuckPerms,
+# "group.<nom>" est donnée automatiquement (groupes hérités compris) : rien d'autre à configurer.
+# Pour un autre système, mettez votre propre permission dans "permission".
+boosts:
+  enabled: true
+  stacking: highest             # highest = le meilleur groupe | multiply | add
+  groups:                       # l'ordre fixe l'icône dans le menu : émeraude, diamant, lingot d'or, netherite, améthyste...
+    vip:                        # permission : group.vip (modifiable avec « permission: »)
+      xp: 1.6                   # XP x1.6
+      drops: 1.4                # multiplicateur de drops de mobs
+      damage: 1.1               # multiplicateur de dégâts infligés
+      potion-duration: 1.4      # durée des potions BÉNÉFIQUES bues/lancées
+      cooldown-reduction: 0.25  # -25% sur les cooldowns des capacités
+      sell-bonus: 0.30          # +30% sur les ventes à la boutique
+      buy-discount: 0.10        # -10% sur les achats à la boutique
+      effects:                  # effets permanents : <effet>: <niveau>
+        luck: 4                 # Chance IV : meilleur butin (pêche, coffres, loot tables)
+    mvp:
+      xp: 1.75
+      drops: 1.5
+      damage: 1.15
+      potion-duration: 1.5
+      cooldown-reduction: 0.30
+      sell-bonus: 0.35
+      buy-discount: 0.15
+      effects:
+        luck: 5
+    donateur:
+      xp: 1.45
+      drops: 1.3
+      damage: 1.05
+      potion-duration: 1.3
+      cooldown-reduction: 0.20
+      sell-bonus: 0.25
+      buy-discount: 0.05
+      effects:
+        luck: 3
+    media:
+      xp: 1.3
+      drops: 1.15
+      damage: 1.0
+      potion-duration: 1.2
+      cooldown-reduction: 0.15
+      sell-bonus: 0.15
+      buy-discount: 0.05
+      effects:
+        luck: 2
+    veteran:
+      xp: 1.15
+      drops: 1.1
+      damage: 1.0
+      potion-duration: 1.1
+      cooldown-reduction: 0.10
+      sell-bonus: 0.10
+      buy-discount: 0.0
+      effects:
+        luck: 1
+    staff:                      # 6e groupe (icône lapis-lazuli)
+      xp: 1.5
+      drops: 1.75
+      damage: 1.0
+      potion-duration: 1.35
+      cooldown-reduction: 0.15
+      sell-bonus: 0.25
+      buy-discount: 0.25
+      effects:
+        haste: 2                # Hâte II
+        luck: 2                 # Chance II
+        # Autres effets possibles : speed, haste, jump_boost, night_vision, water_breathing, fire_resistance,
+        # resistance, regeneration, saturation, health_boost, dolphins_grace...
+
+# ───────── Affichage ─────────
+hud:
+  cooldowns: true               # affiche les cooldowns de l'arme en main (chaque joueur : /vortex hud)
+
+# ───────── Resource pack ─────────
+# true : les items Vortex utilisent les modèles du resource pack (resourcepack/). Sans le pack installé
+# chez le joueur, les items apparaissent avec une texture manquante : n'activez qu'avec le pack imposé.
+use-custom-models: false
+crossbow-models: true                # modèles du pack pour Blazing Crossbow et Voidrender (états de charge) ; mettre false si l'un s'affiche mal
+
+# ───────── Surcharge des enchantements d'un item Vortex (re-donnez l'item après modification) ─────────
+# item-enchants:
+#   mintus:
+#     efficiency: 0     # 0 = retirer l'enchantement
+#     looting: 0
+#   lightspeed:
+#     looting: 0
+
+# ───────── Resource pack (envoi par le plugin) ─────────
+# Alternative à server.properties : n'utilisez que l'un des deux.
+# Diagnostic complet : /vortex pack hash (vérifie lien direct, SHA-1 et structure du zip).
+resource-pack:
+  enabled: false
+  url: ""            # lien DIRECT vers VortexEssentials-Pack.zip
+  sha1: ""           # 40 caractères hexa (donné par /vortex pack hash)
+  force: false       # true : le joueur est expulsé s'il refuse
+  prompt: "&bVortexEssentials &7— textures des items"
+
+# ───────── Discord (webhook) ─────────
+# Salon Discord > Paramètres > Intégrations > Webhooks > Copier l'URL. Cette URL est SECRÈTE : ne la partagez pas.
+# Test : /vortex discord test
+discord:
+  enabled: false
+  webhook-url: ""
+  username: "VortexEssentials"
+  avatar-url-template: "https://mc-heads.net/avatar/{uuid}/64"   # vide = pas de tête de joueur (le service reçoit les UUID)
+  events:
+    join: true
+    quit: true
+    death: true
+    advancement: false
+    chat: false               # relaie le chat du jeu vers Discord (sens unique)
+    server-start: true
+    server-stop: true
+    mythic-forged: true
+  status:
+    enabled: false            # message de statut mis à jour (joueurs, TPS, mémoire, armes mythiques, événements)
+    interval-seconds: 60
+
+# ───────── Boutique ─────────
+# Monnaie : Vault / VaultUnlocked + un plugin d'économie. Les prix sont dans shop.yml (modifiables en jeu : /shop admin > Mode édition).
+# Les boosts de grade ajoutent un bonus de vente (sell-bonus) et une réduction d'achat (buy-discount) : /vortex boost set <id> sell|discount <valeur>.
+shop:
+  enabled: true
+  wealth-scaling:               # plus un joueur est riche, plus les prix d'achat montent
+    enabled: true
+    base-balance: 10000         # en dessous : prix normaux
+    per-doubling: 0.06          # +6 % à chaque doublement de la fortune au-delà
+    max: 3.0                    # plafond du multiplicateur
+  sell-all-hotbar: false          # « vendre tout » ignore la barre rapide (évite de vendre ses outils par erreur)
+  sell-menu:
+    auto-sell-on-close: true      # /sell : fermer le menu vend les items déposés (false = bouton « Vendre maintenant »)
+  player-shop:
+    enabled: true
+    max-listings: 10              # annonces par joueur
+    tax-percent: 5                # taxe prélevée sur le vendeur
+    min-price: 1
+    max-price: 1000000000
+
+# ───────── Consommables ─────────
+panacea:
+  heal-hearts: 3.5              # cœurs soignés par charge (5 charges max)
+crystallization-shard:
+  seconds: 8                    # durée de la cristallisation (immobile, invulnérable, sans recul)
+
+# ───────── Armes légendaires : exemplaires craftables ─────────
+legendary-limits:
+  max-per-weapon: 3             # exemplaires craftables sur tout le serveur, par arme légendaire (0 = illimité)
+  max-per-player: 2             # armes légendaires craftables par joueur, toutes armes confondues (0 = illimité)
+
+# ───────── Temps de jeu ─────────
+playtime:
+  enabled: true
+  afk-seconds: 300              # sans bouger ni agir pendant ce temps : le temps de jeu ne compte plus
+  save-interval-seconds: 300
+  # Récompenses par palier (heures de jeu actives), commandes exécutées par la console :
+  # rewards:
+  #   - hours: 10
+  #     commands: ["give {player} diamond 5"]
+  #     message: "&aBravo {player} : 10 heures de jeu !"
+
+# ───────── Armures mythiques (capacité : double sneak) ─────────
+mythic-armors:
+  colossus-plate:               # plastron
+    effects:                    # effets permanents : <effet>: <niveau>
+      resistance: 1
+      health_boost: 4
+      haste: 2
+    reflect-percent: 20         # % des dégâts de mêlée renvoyés à l'attaquant
+    fortress:                   # Résistance IV, sans recul, onde de choc
+      cooldown: 60
+      seconds: 6
+      radius: 5
+      damage: 4
+  phantom-treads:               # bottes (aucun dégât de chute)
+    effects:                    # effets permanents : <effet>: <niveau>
+      speed: 3
+      fire_resistance: 1
+      haste: 3
+    shadow-step:                # dash en avant + invisibilité
+      cooldown: 25
+      power: 2.2
+      invisibility-seconds: 3
+  radiant-crown:                # casque (immunisé cécité / obscurité / nausée)
+    effects:                    # effets permanents : <effet>: <niveau>
+      night_vision: 1
+      conduit_power: 1
+      haste: 5
+    solar-flare:                # aveugle et révèle les ennemis, soigne le porteur
+      cooldown: 45
+      radius: 8
+      blind-seconds: 3
+      glow-seconds: 8
+      heal: 6
+  ember-greaves:                # jambières (immunité au feu, les attaquants brûlent)
+    effects:
+      fire_resistance: 1
+      regeneration: 1
+    burn-seconds: 4
+    flame-nova:                 # enflamme et repousse
+      cooldown: 40
+      radius: 6
+      damage: 5
+      fire-seconds: 6
+
+# ───────── /announce ─────────
+announce:
+  format: "&8[&6Annonce&8] &f{message}"
+  title: "&6&lAnnonce"
+  discord: false
+
+# ───────── /smp start|stop : lancement du SMP ─────────
+smp:
+  lock-weapons: true                 # armes légendaires et mythiques non craftables avant le délai
+  weapon-delay-hours: 48             # délai après /smp start (modifiable en jeu : /smp delay <heures>)
+  disable-maintenance-on-start: true
+  maintenance-on-stop: false
+  start-commands: []                 # commandes console au lancement, ex. ["whitelist off"]
+  stop-commands: []
+
+# ───────── Rituels de craft (armes légendaires et mythiques) ─────────
+rituals:
+  enabled: true
+  max-concurrent: 1                  # rituels de craft simultanés par joueur
+  broadcast-title: true              # titre + son pour tous les joueurs
+  lightning-effect: true             # foudres cosmétiques
+  mythic-strikes: 3
+  glow-seconds: 10                   # lueur du forgeron
+
+# ───────── Mode maintenance ─────────
+maintenance:
+  kick-online: true                  # expulse à l'activation les joueurs sans accès
+  use-server-whitelist: true         # la whitelist du serveur donne aussi accès pendant la maintenance
+  kick-message: "&c&lServeur en maintenance\n&7Revenez un peu plus tard !"
+  motd: ""                           # laissez vide si MiniMOTD gère déjà l'affichage
+
+# ───────── Outils staff ─────────
+staff:
+  default-jail: ""                   # sinon la première prison définie
+  jail-radius: 6
+  freeze-quit-alert: true
+  allowed-commands: [msg, r, w, tell, helpop]   # commandes permises en prison / gelé
+  xray:
+    max-radius: 16
+    max-displays: 300
+    ores: [DIAMOND_ORE, DEEPSLATE_DIAMOND_ORE, EMERALD_ORE, DEEPSLATE_EMERALD_ORE, ANCIENT_DEBRIS, GOLD_ORE, DEEPSLATE_GOLD_ORE, NETHER_GOLD_ORE, SPAWNER]
+
+# ───────── Mace vanilla : exemplaires craftables ─────────
+mace-limits:
+  max-per-server: 3             # maces craftables sur tout le serveur (0 = illimité)
+  max-per-player: 1             # maces craftables par joueur (0 = illimité)
+
+# ───────── Commandes (/orders) ─────────
+orders:
+  enabled: true
+  min-price: 0.01                    # prix unitaire minimal
+  max-price: 10000000
+  max-quantity: 2304
+  max-per-player: 10                 # commandes ouvertes par joueur
+
+# ───────── Dimensions (menu /servermenu) ─────────
+dimensions:
+  eject-on-disable: true             # renvoie les joueurs présents quand on désactive le Nether / l'End
+
+# ───────── Primes (/bounty) ─────────
+bounty:
+  enabled: true
+  min-amount: 100
+  max-amount: 1000000000
+  tax-percent: 5                     # retenue sur la prime encaissée
+  broadcast: true
+
+# ───────── Mode staff (/staffmod) ─────────
+staffmod:
+  hint-on-join: true                 # rappelle son palier au staff à la connexion
+
+# ───────── Spawners empilables (/uspawner, /us) ─────────
+spawners:
+  enabled: true
+  max-stack: 128
+  silk-touch-required: true
+  auto-farm-kill-delay-ticks: 40
+  min-spawn-delay: 200
+  max-spawn-delay: 800
+  max-spawn-per-cycle: 12            # mobs réellement générés par cycle (le reste est converti en butin)
+  base-range: 16                     # distance d'activation (+4 blocs par niveau de portée)
+  hologram: true
+  auto-sell: true                    # vente automatique activable par spawner dans son menu
+  audit-log: true                    # spawners/audit-<date>.log, consultable avec /us log
+  protect-from-explosions: true
+  protect-from-pistons: true
+  require-use-permission: true
+  limits:
+    max-blocks-per-player: 50        # blocs de spawner posés par joueur (0 = illimité)
+    max-blocks-per-chunk: 8
+  auto-farm:
+    enabled: true
+    store-drops: true
+    store-experience: true
+  upgrades:                          # prix de chaque niveau (la longueur de la liste = niveau maximal)
+    speed: [5000, 15000, 40000, 100000, 250000]
+    range: [3000, 10000, 30000, 80000, 200000]
+    quantity: [8000, 25000, 70000, 180000, 450000]
+  upgrade-materials:                 # matériaux du mob exigés pour chaque amélioration (stock du spawner d'abord, puis inventaire)
+    amounts:                         # quantité par niveau
+      speed: [32, 96, 256, 640, 1536]
+      range: [32, 96, 256, 640, 1536]
+      quantity: [64, 192, 512, 1280, 3072]
+    mobs:                            # mob : matériau (un mob absent de la liste n'exige aucun matériau)
+      ZOMBIE: ROTTEN_FLESH
+      SKELETON: BONE
+      SPIDER: SPIDER_EYE
+      CREEPER: GUNPOWDER
+      BLAZE: BLAZE_ROD
+      ENDERMAN: ENDER_PEARL
+      COW: LEATHER
+      PIG: PORKCHOP
+      IRON_GOLEM: IRON_INGOT
+      TURTLE: TURTLE_SCUTE
+      NAUTILUS: NAUTILUS_SHELL
+      ARMADILLO: ARMADILLO_SCUTE
+      CAVE_SPIDER: SPIDER_EYE
+      SLIME: SLIME_BALL
+      MAGMA_CUBE: MAGMA_CREAM
+      WITCH: REDSTONE
+      ZOMBIE_VILLAGER: ROTTEN_FLESH
+      VILLAGER: EMERALD
+      BREEZE: BREEZE_ROD
+      EVOKER: EMERALD
+      GHAST: GHAST_TEAR
+      WITHER_SKELETON: COAL
+      SHULKER: SHULKER_SHELL
+  shop:
+    enabled: true
+    prices:
+      ZOMBIE: 250.0
+      SKELETON: 300.0
+      SPIDER: 275.0
+      CREEPER: 500.0
+      BLAZE: 1200.0
+      ENDERMAN: 1500.0
+      COW: 150.0
+      PIG: 150.0
+      IRON_GOLEM: 2500.0
+      TURTLE: 400.0
+      NAUTILUS: 900.0
+      ARMADILLO: 600.0
+      CAVE_SPIDER: 700.0
+      SLIME: 800.0
+      MAGMA_CUBE: 1500.0
+      WITCH: 1500.0
+      ZOMBIE_VILLAGER: 1800.0
+      VILLAGER: 2000.0
+      BREEZE: 3500.0
+      EVOKER: 4000.0
+      GHAST: 5000.0
+      WITHER_SKELETON: 6000.0
+      SHULKER: 7000.0

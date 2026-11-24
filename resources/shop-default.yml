@@ -1,0 +1,4585 @@
+# Catalogue par défaut de la boutique (copié en shop.yml au premier démarrage).
+# buy = prix d'achat par unité, sell = prix de vente par unité, -1 = non achetable / non vendable.
+# Clés d'items : nom de Material, vortex:<id> (item Vortex) ou citem:<id> (item personnalisé).
+# Ajouter les nouveautés à une boutique existante sans toucher à vos prix : /shop manage import
+categories:
+  blocks:
+    name: Blocs
+    icon: GRASS_BLOCK
+    enabled: true
+    items:
+      STONE:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      GRANITE:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      DIORITE:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      ANDESITE:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      DEEPSLATE:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      COBBLED_DEEPSLATE:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_DEEPSLATE:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      CALCITE:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      TUFF:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      TUFF_SLAB:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      TUFF_STAIRS:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      TUFF_WALL:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      CHISELED_TUFF:
+        buy: 8.0
+        sell: 0.6
+        enabled: true
+      POLISHED_TUFF:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      POLISHED_TUFF_SLAB:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      POLISHED_TUFF_STAIRS:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_TUFF_WALL:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      TUFF_BRICKS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      TUFF_BRICK_SLAB:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      TUFF_BRICK_STAIRS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      TUFF_BRICK_WALL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      CHISELED_TUFF_BRICKS:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      GRASS_BLOCK:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      DIRT:
+        buy: 1.5
+        sell: 0.2
+        enabled: true
+      COARSE_DIRT:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      PODZOL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      ROOTED_DIRT:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      MUD:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      CRIMSON_NYLIUM:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      WARPED_NYLIUM:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      COBBLESTONE:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      SAND:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      RED_SAND:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      GRAVEL:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      TINTED_GLASS:
+        buy: 40.0
+        sell: 4.8
+        enabled: true
+      SANDSTONE:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      CHISELED_SANDSTONE:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      CUT_SANDSTONE:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      COBWEB:
+        buy: 90.0
+        sell: -1.0
+        enabled: true
+      STONE_SLAB:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      SMOOTH_STONE_SLAB:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      SANDSTONE_SLAB:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      CUT_SANDSTONE_SLAB:
+        buy: 4.5
+        sell: 0.5
+        enabled: true
+      COBBLESTONE_SLAB:
+        buy: 1.0
+        sell: 0.1
+        enabled: true
+      BRICK_SLAB:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      STONE_BRICK_SLAB:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      MUD_BRICK_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      NETHER_BRICK_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      QUARTZ_SLAB:
+        buy: 7.5
+        sell: 0.8
+        enabled: true
+      RED_SANDSTONE_SLAB:
+        buy: 4.5
+        sell: 0.5
+        enabled: true
+      CUT_RED_SANDSTONE_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      PURPUR_SLAB:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      PRISMARINE_SLAB:
+        buy: 15.0
+        sell: 1.8
+        enabled: true
+      PRISMARINE_BRICK_SLAB:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      DARK_PRISMARINE_SLAB:
+        buy: 40.0
+        sell: 4.8
+        enabled: true
+      SMOOTH_QUARTZ:
+        buy: 45.0
+        sell: 5.6
+        enabled: true
+      SMOOTH_RED_SANDSTONE:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      SMOOTH_SANDSTONE:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      SMOOTH_STONE:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      MOSSY_COBBLESTONE:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      OBSIDIAN:
+        buy: 120.0
+        sell: -1.0
+        enabled: true
+      PURPUR_BLOCK:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      PURPUR_PILLAR:
+        buy: 22.0
+        sell: 2.6
+        enabled: true
+      PURPUR_STAIRS:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      COBBLESTONE_STAIRS:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      SNOW:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      ICE:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      SNOW_BLOCK:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      CLAY:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      NETHERRACK:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      SOUL_SAND:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      SOUL_SOIL:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      BASALT:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_BASALT:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      SMOOTH_BASALT:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      STONE_BRICKS:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      MOSSY_STONE_BRICKS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      CRACKED_STONE_BRICKS:
+        buy: 7.0
+        sell: 0.8
+        enabled: true
+      PACKED_MUD:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      MUD_BRICKS:
+        buy: 10.0
+        sell: 0.9
+        enabled: true
+      DEEPSLATE_BRICKS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CRACKED_DEEPSLATE_BRICKS:
+        buy: 11.0
+        sell: 1.2
+        enabled: true
+      DEEPSLATE_TILES:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CRACKED_DEEPSLATE_TILES:
+        buy: 11.0
+        sell: 1.2
+        enabled: true
+      CHISELED_DEEPSLATE:
+        buy: 12.0
+        sell: 0.9
+        enabled: true
+      IRON_CHAIN:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      RESIN_CLUMP:
+        buy: 6.0
+        sell: 0.3
+        enabled: true
+      RESIN_BLOCK:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      RESIN_BRICKS:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      RESIN_BRICK_STAIRS:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      RESIN_BRICK_SLAB:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      RESIN_BRICK_WALL:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      CHISELED_RESIN_BRICKS:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      BRICK_STAIRS:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      STONE_BRICK_STAIRS:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      MUD_BRICK_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      MYCELIUM:
+        buy: 40.0
+        sell: 4.8
+        enabled: true
+      NETHER_BRICKS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CRACKED_NETHER_BRICKS:
+        buy: 11.0
+        sell: 1.2
+        enabled: true
+      CHISELED_NETHER_BRICKS:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      NETHER_BRICK_FENCE:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      NETHER_BRICK_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      END_STONE:
+        buy: 12.0
+        sell: 1.4
+        enabled: true
+      END_STONE_BRICKS:
+        buy: 15.0
+        sell: 1.8
+        enabled: true
+      DRAGON_EGG:
+        buy: 150000.0
+        sell: 24000.0
+        enabled: true
+      SANDSTONE_STAIRS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      COBBLESTONE_WALL:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      MOSSY_COBBLESTONE_WALL:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      BRICK_WALL:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      PRISMARINE_WALL:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      RED_SANDSTONE_WALL:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      MOSSY_STONE_BRICK_WALL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      GRANITE_WALL:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      STONE_BRICK_WALL:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      MUD_BRICK_WALL:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      NETHER_BRICK_WALL:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      ANDESITE_WALL:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      RED_NETHER_BRICK_WALL:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      SANDSTONE_WALL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      END_STONE_BRICK_WALL:
+        buy: 15.0
+        sell: 1.8
+        enabled: true
+      DIORITE_WALL:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      BLACKSTONE_WALL:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_BLACKSTONE_WALL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      POLISHED_BLACKSTONE_BRICK_WALL:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      COBBLED_DEEPSLATE_WALL:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_DEEPSLATE_WALL:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      DEEPSLATE_BRICK_WALL:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      DEEPSLATE_TILE_WALL:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CHISELED_QUARTZ_BLOCK:
+        buy: 42.0
+        sell: 2.2
+        enabled: true
+      QUARTZ_BRICKS:
+        buy: 44.0
+        sell: 5.2
+        enabled: true
+      QUARTZ_STAIRS:
+        buy: 15.0
+        sell: 1.8
+        enabled: true
+      PACKED_ICE:
+        buy: 20.0
+        sell: 2.4
+        enabled: true
+      PRISMARINE:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      PRISMARINE_BRICKS:
+        buy: 60.0
+        sell: 7.2
+        enabled: true
+      DARK_PRISMARINE:
+        buy: 80.0
+        sell: 9.6
+        enabled: true
+      PRISMARINE_STAIRS:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      PRISMARINE_BRICK_STAIRS:
+        buy: 60.0
+        sell: 7.2
+        enabled: true
+      DARK_PRISMARINE_STAIRS:
+        buy: 80.0
+        sell: 9.6
+        enabled: true
+      SEA_LANTERN:
+        buy: 60.0
+        sell: 7.2
+        enabled: true
+      RED_SANDSTONE:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      CHISELED_RED_SANDSTONE:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CUT_RED_SANDSTONE:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      RED_SANDSTONE_STAIRS:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      MAGMA_BLOCK:
+        buy: 30.0
+        sell: 1.8
+        enabled: true
+      RED_NETHER_BRICKS:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      BONE_BLOCK:
+        buy: 24.0
+        sell: 2.9
+        enabled: true
+      DRIED_GHAST:
+        buy: 460.0
+        sell: 60.0
+        enabled: true
+      BLUE_ICE:
+        buy: 185.0
+        sell: 24.0
+        enabled: true
+      CONDUIT:
+        buy: 6500.0
+        sell: 480.0
+        enabled: true
+      POLISHED_GRANITE_STAIRS:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      SMOOTH_RED_SANDSTONE_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      MOSSY_STONE_BRICK_STAIRS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      POLISHED_DIORITE_STAIRS:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      MOSSY_COBBLESTONE_STAIRS:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      END_STONE_BRICK_STAIRS:
+        buy: 15.0
+        sell: 1.8
+        enabled: true
+      STONE_STAIRS:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      SMOOTH_SANDSTONE_STAIRS:
+        buy: 9.0
+        sell: 1.0
+        enabled: true
+      SMOOTH_QUARTZ_STAIRS:
+        buy: 45.0
+        sell: 5.6
+        enabled: true
+      GRANITE_STAIRS:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      ANDESITE_STAIRS:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      RED_NETHER_BRICK_STAIRS:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      POLISHED_ANDESITE_STAIRS:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      DIORITE_STAIRS:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      COBBLED_DEEPSLATE_STAIRS:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_DEEPSLATE_STAIRS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      DEEPSLATE_BRICK_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      DEEPSLATE_TILE_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      POLISHED_GRANITE_SLAB:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      SMOOTH_RED_SANDSTONE_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      MOSSY_STONE_BRICK_SLAB:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      POLISHED_DIORITE_SLAB:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      MOSSY_COBBLESTONE_SLAB:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      END_STONE_BRICK_SLAB:
+        buy: 7.5
+        sell: 0.8
+        enabled: true
+      SMOOTH_SANDSTONE_SLAB:
+        buy: 4.5
+        sell: 0.5
+        enabled: true
+      SMOOTH_QUARTZ_SLAB:
+        buy: 22.0
+        sell: 2.6
+        enabled: true
+      GRANITE_SLAB:
+        buy: 1.5
+        sell: 0.2
+        enabled: true
+      ANDESITE_SLAB:
+        buy: 1.5
+        sell: 0.2
+        enabled: true
+      RED_NETHER_BRICK_SLAB:
+        buy: 7.0
+        sell: 0.8
+        enabled: true
+      POLISHED_ANDESITE_SLAB:
+        buy: 2.0
+        sell: 0.2
+        enabled: true
+      DIORITE_SLAB:
+        buy: 1.5
+        sell: 0.2
+        enabled: true
+      COBBLED_DEEPSLATE_SLAB:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      POLISHED_DEEPSLATE_SLAB:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      DEEPSLATE_BRICK_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      DEEPSLATE_TILE_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      EXPOSED_LIGHTNING_ROD:
+        buy: 24.0
+        sell: 2.9
+        enabled: true
+      WEATHERED_LIGHTNING_ROD:
+        buy: 24.0
+        sell: 2.9
+        enabled: true
+      OXIDIZED_LIGHTNING_ROD:
+        buy: 24.0
+        sell: 2.9
+        enabled: true
+      WAXED_LIGHTNING_ROD:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      WAXED_EXPOSED_LIGHTNING_ROD:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      WAXED_WEATHERED_LIGHTNING_ROD:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      WAXED_OXIDIZED_LIGHTNING_ROD:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      IRON_DOOR:
+        buy: 140.0
+        sell: 9.0
+        enabled: true
+      IRON_TRAPDOOR:
+        buy: 80.0
+        sell: 9.6
+        enabled: true
+      LOOM:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      SMOKER:
+        buy: 22.0
+        sell: 2.6
+        enabled: true
+      BLAST_FURNACE:
+        buy: 150.0
+        sell: 20.0
+        enabled: true
+      CARTOGRAPHY_TABLE:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      FLETCHING_TABLE:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      SMITHING_TABLE:
+        buy: 40.0
+        sell: 4.8
+        enabled: true
+      STONECUTTER:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      BEE_NEST:
+        buy: 170.0
+        sell: 22.0
+        enabled: true
+      BEEHIVE:
+        buy: 60.0
+        sell: 7.2
+        enabled: true
+      HONEYCOMB_BLOCK:
+        buy: 30.0
+        sell: 3.6
+        enabled: true
+      LODESTONE:
+        buy: 3120.0
+        sell: 20.0
+        enabled: true
+      CRYING_OBSIDIAN:
+        buy: 255.0
+        sell: -1.0
+        enabled: true
+      BLACKSTONE:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      BLACKSTONE_SLAB:
+        buy: 3.0
+        sell: 0.3
+        enabled: true
+      BLACKSTONE_STAIRS:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      POLISHED_BLACKSTONE:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      POLISHED_BLACKSTONE_SLAB:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      POLISHED_BLACKSTONE_STAIRS:
+        buy: 8.0
+        sell: 0.9
+        enabled: true
+      CHISELED_POLISHED_BLACKSTONE:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      POLISHED_BLACKSTONE_BRICKS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      POLISHED_BLACKSTONE_BRICK_SLAB:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      POLISHED_BLACKSTONE_BRICK_STAIRS:
+        buy: 10.0
+        sell: 1.1
+        enabled: true
+      CRACKED_POLISHED_BLACKSTONE_BRICKS:
+        buy: 11.0
+        sell: 1.2
+        enabled: true
+      RESPAWN_ANCHOR:
+        buy: 2860.0
+        sell: -1.0
+        enabled: true
+      POINTED_DRIPSTONE:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      OCHRE_FROGLIGHT:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      VERDANT_FROGLIGHT:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      PEARLESCENT_FROGLIGHT:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      COPPER_CHEST:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      EXPOSED_COPPER_CHEST:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      WEATHERED_COPPER_CHEST:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      OXIDIZED_COPPER_CHEST:
+        buy: 140.0
+        sell: 18.0
+        enabled: true
+      WAXED_COPPER_CHEST:
+        buy: 145.0
+        sell: 19.0
+        enabled: true
+      WAXED_EXPOSED_COPPER_CHEST:
+        buy: 145.0
+        sell: 19.0
+        enabled: true
+      WAXED_WEATHERED_COPPER_CHEST:
+        buy: 145.0
+        sell: 19.0
+        enabled: true
+      WAXED_OXIDIZED_COPPER_CHEST:
+        buy: 145.0
+        sell: 19.0
+        enabled: true
+      COPPER_GOLEM_STATUE:
+        buy: 290.0
+        sell: 38.0
+        enabled: true
+      EXPOSED_COPPER_GOLEM_STATUE:
+        buy: 290.0
+        sell: 38.0
+        enabled: true
+      WEATHERED_COPPER_GOLEM_STATUE:
+        buy: 290.0
+        sell: 38.0
+        enabled: true
+      OXIDIZED_COPPER_GOLEM_STATUE:
+        buy: 290.0
+        sell: 38.0
+        enabled: true
+      WAXED_COPPER_GOLEM_STATUE:
+        buy: 295.0
+        sell: 39.0
+        enabled: true
+      WAXED_EXPOSED_COPPER_GOLEM_STATUE:
+        buy: 295.0
+        sell: 39.0
+        enabled: true
+      WAXED_WEATHERED_COPPER_GOLEM_STATUE:
+        buy: 295.0
+        sell: 39.0
+        enabled: true
+      WAXED_OXIDIZED_COPPER_GOLEM_STATUE:
+        buy: 295.0
+        sell: 39.0
+        enabled: true
+  wood:
+    name: Bois
+    icon: OAK_LOG
+    enabled: true
+    items:
+      OAK_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      SPRUCE_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      BIRCH_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      JUNGLE_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      ACACIA_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      CHERRY_PLANKS:
+        buy: 2.4
+        sell: 0.3
+        enabled: true
+      DARK_OAK_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      PALE_OAK_PLANKS:
+        buy: 2.4
+        sell: 0.3
+        enabled: true
+      MANGROVE_PLANKS:
+        buy: 2.2
+        sell: 0.3
+        enabled: true
+      BAMBOO_PLANKS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      CRIMSON_PLANKS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      WARPED_PLANKS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      BAMBOO_MOSAIC:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      OAK_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      SPRUCE_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      BIRCH_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      JUNGLE_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      ACACIA_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      CHERRY_LOG:
+        buy: 9.6
+        sell: 1.4
+        enabled: true
+      PALE_OAK_LOG:
+        buy: 9.6
+        sell: 1.4
+        enabled: true
+      DARK_OAK_LOG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      MANGROVE_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      CRIMSON_STEM:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      WARPED_STEM:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      BAMBOO_BLOCK:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      STRIPPED_OAK_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_SPRUCE_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_BIRCH_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_JUNGLE_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_ACACIA_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_CHERRY_LOG:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_DARK_OAK_LOG:
+        buy: 8.8
+        sell: 1.2
+        enabled: true
+      STRIPPED_PALE_OAK_LOG:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_MANGROVE_LOG:
+        buy: 9.7
+        sell: 1.4
+        enabled: true
+      STRIPPED_CRIMSON_STEM:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      STRIPPED_WARPED_STEM:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      STRIPPED_OAK_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_SPRUCE_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_BIRCH_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_JUNGLE_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_ACACIA_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_CHERRY_WOOD:
+        buy: 13.0
+        sell: 1.8
+        enabled: true
+      STRIPPED_DARK_OAK_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      STRIPPED_PALE_OAK_WOOD:
+        buy: 13.0
+        sell: 1.8
+        enabled: true
+      STRIPPED_MANGROVE_WOOD:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      STRIPPED_CRIMSON_HYPHAE:
+        buy: 23.0
+        sell: 3.5
+        enabled: true
+      STRIPPED_WARPED_HYPHAE:
+        buy: 23.0
+        sell: 3.5
+        enabled: true
+      STRIPPED_BAMBOO_BLOCK:
+        buy: 6.6
+        sell: 0.9
+        enabled: true
+      OAK_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      SPRUCE_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BIRCH_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      JUNGLE_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      ACACIA_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      CHERRY_WOOD:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      PALE_OAK_WOOD:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      DARK_OAK_WOOD:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      MANGROVE_WOOD:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      CRIMSON_HYPHAE:
+        buy: 21.0
+        sell: 3.1
+        enabled: true
+      WARPED_HYPHAE:
+        buy: 21.0
+        sell: 3.1
+        enabled: true
+      OAK_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      SPRUCE_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      BIRCH_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      JUNGLE_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      ACACIA_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      CHERRY_SLAB:
+        buy: 1.8
+        sell: 0.2
+        enabled: true
+      DARK_OAK_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      PALE_OAK_SLAB:
+        buy: 1.8
+        sell: 0.2
+        enabled: true
+      MANGROVE_SLAB:
+        buy: 1.7
+        sell: 0.2
+        enabled: true
+      BAMBOO_SLAB:
+        buy: 1.5
+        sell: 0.1
+        enabled: true
+      BAMBOO_MOSAIC_SLAB:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      CRIMSON_SLAB:
+        buy: 2.2
+        sell: 0.2
+        enabled: true
+      WARPED_SLAB:
+        buy: 2.2
+        sell: 0.2
+        enabled: true
+      ACACIA_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      BAMBOO_SHELF:
+        buy: 12.0
+        sell: 1.0
+        enabled: true
+      BIRCH_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      CHERRY_SHELF:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      CRIMSON_SHELF:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      DARK_OAK_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      JUNGLE_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      MANGROVE_SHELF:
+        buy: 13.0
+        sell: 1.5
+        enabled: true
+      OAK_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      PALE_OAK_SHELF:
+        buy: 14.0
+        sell: 1.6
+        enabled: true
+      SPRUCE_SHELF:
+        buy: 12.0
+        sell: 1.3
+        enabled: true
+      WARPED_SHELF:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      OAK_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      SPRUCE_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      BIRCH_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      JUNGLE_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      ACACIA_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      CHERRY_FENCE:
+        buy: 4.2
+        sell: 0.6
+        enabled: true
+      DARK_OAK_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      PALE_OAK_FENCE:
+        buy: 4.2
+        sell: 0.6
+        enabled: true
+      MANGROVE_FENCE:
+        buy: 3.9
+        sell: 0.5
+        enabled: true
+      BAMBOO_FENCE:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      CRIMSON_FENCE:
+        buy: 5.2
+        sell: 0.7
+        enabled: true
+      WARPED_FENCE:
+        buy: 5.2
+        sell: 0.7
+        enabled: true
+      OAK_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      SPRUCE_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      BIRCH_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      JUNGLE_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      ACACIA_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      CHERRY_STAIRS:
+        buy: 3.6
+        sell: 0.5
+        enabled: true
+      DARK_OAK_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      PALE_OAK_STAIRS:
+        buy: 3.6
+        sell: 0.5
+        enabled: true
+      MANGROVE_STAIRS:
+        buy: 3.3
+        sell: 0.5
+        enabled: true
+      BAMBOO_STAIRS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      BAMBOO_MOSAIC_STAIRS:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      CRIMSON_STAIRS:
+        buy: 4.5
+        sell: 0.7
+        enabled: true
+      WARPED_STAIRS:
+        buy: 4.5
+        sell: 0.7
+        enabled: true
+      OAK_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      SPRUCE_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      BIRCH_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      JUNGLE_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      ACACIA_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      CHERRY_BUTTON:
+        buy: 2.4
+        sell: 0.3
+        enabled: true
+      DARK_OAK_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      PALE_OAK_BUTTON:
+        buy: 2.4
+        sell: 0.3
+        enabled: true
+      MANGROVE_BUTTON:
+        buy: 2.2
+        sell: 0.3
+        enabled: true
+      BAMBOO_BUTTON:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      CRIMSON_BUTTON:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      WARPED_BUTTON:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      OAK_PRESSURE_PLATE:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      SPRUCE_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      BIRCH_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      JUNGLE_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      ACACIA_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      CHERRY_PRESSURE_PLATE:
+        buy: 4.8
+        sell: 0.7
+        enabled: true
+      DARK_OAK_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      PALE_OAK_PRESSURE_PLATE:
+        buy: 4.8
+        sell: 0.7
+        enabled: true
+      MANGROVE_PRESSURE_PLATE:
+        buy: 4.4
+        sell: 0.6
+        enabled: true
+      BAMBOO_PRESSURE_PLATE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      CRIMSON_PRESSURE_PLATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      WARPED_PRESSURE_PLATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      OAK_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      SPRUCE_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      BIRCH_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      JUNGLE_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      ACACIA_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      CHERRY_DOOR:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      DARK_OAK_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      PALE_OAK_DOOR:
+        buy: 6.0
+        sell: 0.7
+        enabled: true
+      MANGROVE_DOOR:
+        buy: 5.5
+        sell: 0.7
+        enabled: true
+      BAMBOO_DOOR:
+        buy: 5.0
+        sell: 0.6
+        enabled: true
+      CRIMSON_DOOR:
+        buy: 7.5
+        sell: 0.9
+        enabled: true
+      WARPED_DOOR:
+        buy: 7.5
+        sell: 0.9
+        enabled: true
+      OAK_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      SPRUCE_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      BIRCH_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      JUNGLE_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      ACACIA_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      CHERRY_TRAPDOOR:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DARK_OAK_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      PALE_OAK_TRAPDOOR:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      MANGROVE_TRAPDOOR:
+        buy: 5.5
+        sell: 0.8
+        enabled: true
+      BAMBOO_TRAPDOOR:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      CRIMSON_TRAPDOOR:
+        buy: 7.5
+        sell: 1.1
+        enabled: true
+      WARPED_TRAPDOOR:
+        buy: 7.5
+        sell: 1.1
+        enabled: true
+      OAK_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      SPRUCE_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      BIRCH_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      JUNGLE_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      ACACIA_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      CHERRY_FENCE_GATE:
+        buy: 7.2
+        sell: 1.0
+        enabled: true
+      DARK_OAK_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      PALE_OAK_FENCE_GATE:
+        buy: 7.2
+        sell: 1.0
+        enabled: true
+      MANGROVE_FENCE_GATE:
+        buy: 6.6
+        sell: 0.9
+        enabled: true
+      BAMBOO_FENCE_GATE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      CRIMSON_FENCE_GATE:
+        buy: 9.0
+        sell: 1.2
+        enabled: true
+      WARPED_FENCE_GATE:
+        buy: 9.0
+        sell: 1.2
+        enabled: true
+      OAK_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      OAK_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      SPRUCE_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      SPRUCE_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      BIRCH_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BIRCH_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      JUNGLE_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      JUNGLE_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      ACACIA_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      ACACIA_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      CHERRY_BOAT:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      CHERRY_CHEST_BOAT:
+        buy: 24.0
+        sell: 3.6
+        enabled: true
+      DARK_OAK_BOAT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      DARK_OAK_CHEST_BOAT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      PALE_OAK_BOAT:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      PALE_OAK_CHEST_BOAT:
+        buy: 24.0
+        sell: 3.6
+        enabled: true
+      MANGROVE_BOAT:
+        buy: 11.0
+        sell: 1.6
+        enabled: true
+      MANGROVE_CHEST_BOAT:
+        buy: 22.0
+        sell: 3.3
+        enabled: true
+      BAMBOO_RAFT:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BAMBOO_CHEST_RAFT:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      OAK_SIGN:
+        buy: 8.0
+        sell: 0.6
+        enabled: true
+      SPRUCE_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      BIRCH_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      JUNGLE_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      ACACIA_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      CHERRY_SIGN:
+        buy: 7.2
+        sell: 0.8
+        enabled: true
+      DARK_OAK_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      PALE_OAK_SIGN:
+        buy: 7.2
+        sell: 0.8
+        enabled: true
+      MANGROVE_SIGN:
+        buy: 6.6
+        sell: 0.7
+        enabled: true
+      BAMBOO_SIGN:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      CRIMSON_SIGN:
+        buy: 9.0
+        sell: 0.9
+        enabled: true
+      WARPED_SIGN:
+        buy: 9.0
+        sell: 0.9
+        enabled: true
+      OAK_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      SPRUCE_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      BIRCH_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      JUNGLE_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      ACACIA_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      CHERRY_HANGING_SIGN:
+        buy: 17.0
+        sell: 2.0
+        enabled: true
+      DARK_OAK_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.7
+        enabled: true
+      PALE_OAK_HANGING_SIGN:
+        buy: 17.0
+        sell: 2.0
+        enabled: true
+      MANGROVE_HANGING_SIGN:
+        buy: 15.0
+        sell: 1.9
+        enabled: true
+      BAMBOO_HANGING_SIGN:
+        buy: 14.0
+        sell: 1.4
+        enabled: true
+      CRIMSON_HANGING_SIGN:
+        buy: 21.0
+        sell: 3.1
+        enabled: true
+      WARPED_HANGING_SIGN:
+        buy: 21.0
+        sell: 3.1
+        enabled: true
+  colored:
+    name: Couleurs & textiles
+    icon: WHITE_WOOL
+    enabled: true
+    items:
+      WHITE_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      ORANGE_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      MAGENTA_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      LIGHT_BLUE_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      YELLOW_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      LIME_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      PINK_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      GRAY_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      LIGHT_GRAY_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      CYAN_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      PURPLE_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      BLUE_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      BROWN_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      GREEN_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      RED_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      BLACK_STAINED_GLASS:
+        buy: 8.0
+        sell: 1.0
+        enabled: true
+      WHITE_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      ORANGE_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      MAGENTA_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      LIGHT_BLUE_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      YELLOW_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      LIME_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      PINK_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      GRAY_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      LIGHT_GRAY_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      CYAN_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      PURPLE_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      BLUE_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      BROWN_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      GREEN_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      RED_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      BLACK_STAINED_GLASS_PANE:
+        buy: 2.5
+        sell: 0.3
+        enabled: true
+      WHITE_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      ORANGE_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      MAGENTA_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      LIGHT_BLUE_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      YELLOW_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      LIME_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      PINK_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      GRAY_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      LIGHT_GRAY_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      CYAN_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      PURPLE_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BLUE_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BROWN_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      GREEN_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      RED_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      BLACK_CONCRETE:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      WHITE_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      ORANGE_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      MAGENTA_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      LIGHT_BLUE_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      YELLOW_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      LIME_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      PINK_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      GRAY_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      LIGHT_GRAY_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      CYAN_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      PURPLE_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      BLUE_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      BROWN_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      GREEN_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      RED_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      BLACK_CONCRETE_POWDER:
+        buy: 8.0
+        sell: 0.4
+        enabled: true
+      WHITE_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      ORANGE_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      MAGENTA_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      LIGHT_BLUE_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      YELLOW_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      LIME_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      PINK_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      GRAY_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      LIGHT_GRAY_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      CYAN_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      PURPLE_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      BLUE_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      BROWN_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      GREEN_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      RED_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      BLACK_HARNESS:
+        buy: 140.0
+        sell: 12.0
+        enabled: true
+      WHITE_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      ORANGE_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      MAGENTA_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      LIGHT_BLUE_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      YELLOW_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      LIME_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      PINK_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      GRAY_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      LIGHT_GRAY_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      CYAN_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      PURPLE_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      BLUE_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      BROWN_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      GREEN_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      RED_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      BLACK_CANDLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+  nature:
+    name: Nature & plantes
+    icon: OAK_SAPLING
+    enabled: true
+    items:
+      OAK_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      SPRUCE_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      BIRCH_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      JUNGLE_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      ACACIA_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      CHERRY_SAPLING:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DARK_OAK_SAPLING:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      PALE_OAK_SAPLING:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      MANGROVE_PROPAGULE:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      MANGROVE_ROOTS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      MUDDY_MANGROVE_ROOTS:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      OAK_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      SPRUCE_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      BIRCH_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      JUNGLE_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      ACACIA_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      CHERRY_LEAVES:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      DARK_OAK_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      PALE_OAK_LEAVES:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      MANGROVE_LEAVES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      AZALEA_LEAVES:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      FLOWERING_AZALEA_LEAVES:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      SPONGE:
+        buy: 170.0
+        sell: 28.0
+        enabled: true
+      WET_SPONGE:
+        buy: 170.0
+        sell: 28.0
+        enabled: true
+      SHORT_GRASS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      FERN:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      BUSH:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      AZALEA:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      FLOWERING_AZALEA:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      DEAD_BUSH:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      FIREFLY_BUSH:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      SHORT_DRY_GRASS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      TALL_DRY_GRASS:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      SEAGRASS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      SEA_PICKLE:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      DANDELION:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      OPEN_EYEBLOSSOM:
+        buy: 140.0
+        sell: 23.0
+        enabled: true
+      CLOSED_EYEBLOSSOM:
+        buy: 140.0
+        sell: 23.0
+        enabled: true
+      POPPY:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      BLUE_ORCHID:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      ALLIUM:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      AZURE_BLUET:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      RED_TULIP:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      ORANGE_TULIP:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      WHITE_TULIP:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      PINK_TULIP:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      OXEYE_DAISY:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      CORNFLOWER:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      LILY_OF_THE_VALLEY:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      WITHER_ROSE:
+        buy: 290.0
+        sell: 48.0
+        enabled: true
+      TORCHFLOWER:
+        buy: 60.0
+        sell: 9.0
+        enabled: true
+      PITCHER_PLANT:
+        buy: 60.0
+        sell: 9.0
+        enabled: true
+      SPORE_BLOSSOM:
+        buy: 140.0
+        sell: 23.0
+        enabled: true
+      BROWN_MUSHROOM:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      RED_MUSHROOM:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      CRIMSON_FUNGUS:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      WARPED_FUNGUS:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      CRIMSON_ROOTS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      WARPED_ROOTS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      NETHER_SPROUTS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      WEEPING_VINES:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      TWISTING_VINES:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      PINK_PETALS:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      WILDFLOWERS:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      LEAF_LITTER:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      MOSS_CARPET:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      MOSS_BLOCK:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      PALE_MOSS_CARPET:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      PALE_HANGING_MOSS:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      PALE_MOSS_BLOCK:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      HANGING_ROOTS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      BIG_DRIPLEAF:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      SMALL_DRIPLEAF:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      CHORUS_FLOWER:
+        buy: 40.0
+        sell: 6.0
+        enabled: true
+      CREAKING_HEART:
+        buy: 780.0
+        sell: 9.8
+        enabled: true
+      CACTUS_FLOWER:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      BROWN_MUSHROOM_BLOCK:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      RED_MUSHROOM_BLOCK:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      MUSHROOM_STEM:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      VINE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      GLOW_LICHEN:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      LILY_PAD:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      SCULK:
+        buy: 40.0
+        sell: 6.0
+        enabled: true
+      SCULK_VEIN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      SCULK_CATALYST:
+        buy: 170.0
+        sell: 28.0
+        enabled: true
+      SCULK_SHRIEKER:
+        buy: 170.0
+        sell: 28.0
+        enabled: true
+      SUNFLOWER:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      LILAC:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      ROSE_BUSH:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      PEONY:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      TALL_GRASS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      LARGE_FERN:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      NETHER_WART_BLOCK:
+        buy: 60.0
+        sell: 9.0
+        enabled: true
+      WARPED_WART_BLOCK:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      TURTLE_EGG:
+        buy: 170.0
+        sell: 28.0
+        enabled: true
+      SNIFFER_EGG:
+        buy: 1040.0
+        sell: 190.0
+        enabled: true
+      DEAD_TUBE_CORAL_BLOCK:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DEAD_BRAIN_CORAL_BLOCK:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DEAD_BUBBLE_CORAL_BLOCK:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DEAD_FIRE_CORAL_BLOCK:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DEAD_HORN_CORAL_BLOCK:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      TUBE_CORAL_BLOCK:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      BRAIN_CORAL_BLOCK:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      BUBBLE_CORAL_BLOCK:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      FIRE_CORAL_BLOCK:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      HORN_CORAL_BLOCK:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      TUBE_CORAL:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      BRAIN_CORAL:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      BUBBLE_CORAL:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      FIRE_CORAL:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      HORN_CORAL:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      DEAD_BRAIN_CORAL:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_BUBBLE_CORAL:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_FIRE_CORAL:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_HORN_CORAL:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_TUBE_CORAL:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      TUBE_CORAL_FAN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      BRAIN_CORAL_FAN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      BUBBLE_CORAL_FAN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      FIRE_CORAL_FAN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      HORN_CORAL_FAN:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      DEAD_TUBE_CORAL_FAN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_BRAIN_CORAL_FAN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_BUBBLE_CORAL_FAN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_FIRE_CORAL_FAN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      DEAD_HORN_CORAL_FAN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      SHROOMLIGHT:
+        buy: 40.0
+        sell: 6.0
+        enabled: true
+  ores:
+    name: Minerais & cuivre
+    icon: DIAMOND
+    enabled: true
+    items:
+      COAL_ORE:
+        buy: 12.0
+        sell: 3.4
+        enabled: true
+      DEEPSLATE_COAL_ORE:
+        buy: 14.0
+        sell: 3.9
+        enabled: true
+      IRON_ORE:
+        buy: 25.0
+        sell: 7.5
+        enabled: true
+      DEEPSLATE_IRON_ORE:
+        buy: 28.0
+        sell: 8.4
+        enabled: true
+      COPPER_ORE:
+        buy: 18.0
+        sell: 5.4
+        enabled: true
+      DEEPSLATE_COPPER_ORE:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      GOLD_ORE:
+        buy: 40.0
+        sell: 12.0
+        enabled: true
+      DEEPSLATE_GOLD_ORE:
+        buy: 45.0
+        sell: 14.0
+        enabled: true
+      REDSTONE_ORE:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      DEEPSLATE_REDSTONE_ORE:
+        buy: 23.0
+        sell: 6.9
+        enabled: true
+      LAPIS_ORE:
+        buy: 25.0
+        sell: 7.5
+        enabled: true
+      DEEPSLATE_LAPIS_ORE:
+        buy: 28.0
+        sell: 8.4
+        enabled: true
+      DIAMOND_ORE:
+        buy: 255.0
+        sell: 84.0
+        enabled: true
+      DEEPSLATE_DIAMOND_ORE:
+        buy: 275.0
+        sell: 91.0
+        enabled: true
+      NETHER_GOLD_ORE:
+        buy: 25.0
+        sell: 7.5
+        enabled: true
+      NETHER_QUARTZ_ORE:
+        buy: 30.0
+        sell: 9.0
+        enabled: true
+      ANCIENT_DEBRIS:
+        buy: 2600.0
+        sell: 255.0
+        enabled: true
+      COAL_BLOCK:
+        buy: 72.0
+        sell: 11.0
+        enabled: true
+      RAW_IRON_BLOCK:
+        buy: 115.0
+        sell: 19.0
+        enabled: true
+      RAW_COPPER_BLOCK:
+        buy: 40.0
+        sell: 6.8
+        enabled: true
+      RAW_GOLD_BLOCK:
+        buy: 185.0
+        sell: 45.0
+        enabled: true
+      AMETHYST_BLOCK:
+        buy: 80.0
+        sell: 12.0
+        enabled: true
+      IRON_BLOCK:
+        buy: 240.0
+        sell: 30.0
+        enabled: true
+      COPPER_BLOCK:
+        buy: 72.0
+        sell: 11.0
+        enabled: true
+      GOLD_BLOCK:
+        buy: 465.0
+        sell: 60.0
+        enabled: true
+      DIAMOND_BLOCK:
+        buy: 3170.0
+        sell: 340.0
+        enabled: true
+      NETHERITE_BLOCK:
+        buy: 135000.0
+        sell: 4500.0
+        enabled: true
+      EXPOSED_COPPER:
+        buy: 72.0
+        sell: 22.0
+        enabled: true
+      WEATHERED_COPPER:
+        buy: 72.0
+        sell: 22.0
+        enabled: true
+      OXIDIZED_COPPER:
+        buy: 72.0
+        sell: 22.0
+        enabled: true
+      CHISELED_COPPER:
+        buy: 24.0
+        sell: 3.0
+        enabled: true
+      EXPOSED_CHISELED_COPPER:
+        buy: 24.0
+        sell: 3.0
+        enabled: true
+      WEATHERED_CHISELED_COPPER:
+        buy: 24.0
+        sell: 3.0
+        enabled: true
+      OXIDIZED_CHISELED_COPPER:
+        buy: 24.0
+        sell: 3.0
+        enabled: true
+      CUT_COPPER:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      EXPOSED_CUT_COPPER:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      WEATHERED_CUT_COPPER:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      OXIDIZED_CUT_COPPER:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      CUT_COPPER_STAIRS:
+        buy: 20.0
+        sell: 4.5
+        enabled: true
+      EXPOSED_CUT_COPPER_STAIRS:
+        buy: 20.0
+        sell: 4.5
+        enabled: true
+      WEATHERED_CUT_COPPER_STAIRS:
+        buy: 20.0
+        sell: 4.5
+        enabled: true
+      OXIDIZED_CUT_COPPER_STAIRS:
+        buy: 20.0
+        sell: 4.5
+        enabled: true
+      CUT_COPPER_SLAB:
+        buy: 10.0
+        sell: 1.5
+        enabled: true
+      EXPOSED_CUT_COPPER_SLAB:
+        buy: 10.0
+        sell: 1.5
+        enabled: true
+      WEATHERED_CUT_COPPER_SLAB:
+        buy: 10.0
+        sell: 1.5
+        enabled: true
+      OXIDIZED_CUT_COPPER_SLAB:
+        buy: 10.0
+        sell: 1.5
+        enabled: true
+      WAXED_COPPER_BLOCK:
+        buy: 78.0
+        sell: 13.0
+        enabled: true
+      WAXED_EXPOSED_COPPER:
+        buy: 78.0
+        sell: 13.0
+        enabled: true
+      WAXED_WEATHERED_COPPER:
+        buy: 78.0
+        sell: 13.0
+        enabled: true
+      WAXED_OXIDIZED_COPPER:
+        buy: 78.0
+        sell: 13.0
+        enabled: true
+      WAXED_CHISELED_COPPER:
+        buy: 30.0
+        sell: 4.8
+        enabled: true
+      WAXED_EXPOSED_CHISELED_COPPER:
+        buy: 30.0
+        sell: 4.8
+        enabled: true
+      WAXED_WEATHERED_CHISELED_COPPER:
+        buy: 30.0
+        sell: 4.8
+        enabled: true
+      WAXED_OXIDIZED_CHISELED_COPPER:
+        buy: 30.0
+        sell: 4.8
+        enabled: true
+      WAXED_CUT_COPPER:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_EXPOSED_CUT_COPPER:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_WEATHERED_CUT_COPPER:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_OXIDIZED_CUT_COPPER:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_CUT_COPPER_STAIRS:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_EXPOSED_CUT_COPPER_STAIRS:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_WEATHERED_CUT_COPPER_STAIRS:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_OXIDIZED_CUT_COPPER_STAIRS:
+        buy: 26.0
+        sell: 5.2
+        enabled: true
+      WAXED_CUT_COPPER_SLAB:
+        buy: 16.0
+        sell: 1.9
+        enabled: true
+      WAXED_EXPOSED_CUT_COPPER_SLAB:
+        buy: 16.0
+        sell: 1.9
+        enabled: true
+      WAXED_WEATHERED_CUT_COPPER_SLAB:
+        buy: 16.0
+        sell: 1.9
+        enabled: true
+      WAXED_OXIDIZED_CUT_COPPER_SLAB:
+        buy: 16.0
+        sell: 1.9
+        enabled: true
+      LAPIS_BLOCK:
+        buy: 125.0
+        sell: 27.0
+        enabled: true
+      REDSTONE_BLOCK:
+        buy: 72.0
+        sell: 11.0
+        enabled: true
+      COPPER_DOOR:
+        buy: 48.0
+        sell: 2.4
+        enabled: true
+      EXPOSED_COPPER_DOOR:
+        buy: 48.0
+        sell: 14.0
+        enabled: true
+      WEATHERED_COPPER_DOOR:
+        buy: 48.0
+        sell: 14.0
+        enabled: true
+      OXIDIZED_COPPER_DOOR:
+        buy: 48.0
+        sell: 14.0
+        enabled: true
+      WAXED_COPPER_DOOR:
+        buy: 54.0
+        sell: 9.4
+        enabled: true
+      WAXED_EXPOSED_COPPER_DOOR:
+        buy: 54.0
+        sell: 9.4
+        enabled: true
+      WAXED_WEATHERED_COPPER_DOOR:
+        buy: 54.0
+        sell: 9.4
+        enabled: true
+      WAXED_OXIDIZED_COPPER_DOOR:
+        buy: 54.0
+        sell: 9.4
+        enabled: true
+      COPPER_TRAPDOOR:
+        buy: 32.0
+        sell: 4.8
+        enabled: true
+      EXPOSED_COPPER_TRAPDOOR:
+        buy: 32.0
+        sell: 9.6
+        enabled: true
+      WEATHERED_COPPER_TRAPDOOR:
+        buy: 32.0
+        sell: 9.6
+        enabled: true
+      OXIDIZED_COPPER_TRAPDOOR:
+        buy: 32.0
+        sell: 9.6
+        enabled: true
+      WAXED_COPPER_TRAPDOOR:
+        buy: 38.0
+        sell: 7.0
+        enabled: true
+      WAXED_EXPOSED_COPPER_TRAPDOOR:
+        buy: 38.0
+        sell: 7.0
+        enabled: true
+      WAXED_WEATHERED_COPPER_TRAPDOOR:
+        buy: 38.0
+        sell: 7.0
+        enabled: true
+      WAXED_OXIDIZED_COPPER_TRAPDOOR:
+        buy: 38.0
+        sell: 7.0
+        enabled: true
+      COAL:
+        buy: 8.0
+        sell: 1.2
+        enabled: true
+      CHARCOAL:
+        buy: 6.0
+        sell: 1.0
+        enabled: true
+      DIAMOND:
+        buy: 255.0
+        sell: 38.0
+        enabled: true
+      QUARTZ:
+        buy: 15.0
+        sell: 2.7
+        enabled: true
+      AMETHYST_SHARD:
+        buy: 20.0
+        sell: 6.0
+        enabled: true
+      RAW_IRON:
+        buy: 12.0
+        sell: 1.7
+        enabled: true
+      IRON_INGOT:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      RAW_COPPER:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      COPPER_INGOT:
+        buy: 8.0
+        sell: 1.2
+        enabled: true
+      RAW_GOLD:
+        buy: 20.0
+        sell: 2.7
+        enabled: true
+      GOLD_INGOT:
+        buy: 30.0
+        sell: 4.5
+        enabled: true
+      NETHERITE_INGOT:
+        buy: 13000.0
+        sell: 430.0
+        enabled: true
+      NETHERITE_SCRAP:
+        buy: 2300.0
+        sell: 225.0
+        enabled: true
+      GOLD_NUGGET:
+        buy: 3.5
+        sell: 0.5
+        enabled: true
+      IRON_NUGGET:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      COPPER_NUGGET:
+        buy: 1.0
+        sell: 0.1
+        enabled: true
+      GILDED_BLACKSTONE:
+        buy: 40.0
+        sell: 12.0
+        enabled: true
+      SMALL_AMETHYST_BUD:
+        buy: 25.0
+        sell: 7.5
+        enabled: true
+      MEDIUM_AMETHYST_BUD:
+        buy: 40.0
+        sell: 12.0
+        enabled: true
+      LARGE_AMETHYST_BUD:
+        buy: 60.0
+        sell: 18.0
+        enabled: true
+      AMETHYST_CLUSTER:
+        buy: 90.0
+        sell: 27.0
+        enabled: true
+      COPPER_GRATE:
+        buy: 24.0
+        sell: 7.2
+        enabled: true
+      EXPOSED_COPPER_GRATE:
+        buy: 24.0
+        sell: 7.2
+        enabled: true
+      WEATHERED_COPPER_GRATE:
+        buy: 24.0
+        sell: 7.2
+        enabled: true
+      OXIDIZED_COPPER_GRATE:
+        buy: 24.0
+        sell: 7.2
+        enabled: true
+      WAXED_COPPER_GRATE:
+        buy: 30.0
+        sell: 5.8
+        enabled: true
+      WAXED_EXPOSED_COPPER_GRATE:
+        buy: 30.0
+        sell: 5.8
+        enabled: true
+      WAXED_WEATHERED_COPPER_GRATE:
+        buy: 30.0
+        sell: 5.8
+        enabled: true
+      WAXED_OXIDIZED_COPPER_GRATE:
+        buy: 30.0
+        sell: 5.8
+        enabled: true
+      COPPER_BULB:
+        buy: 125.0
+        sell: 16.0
+        enabled: true
+      EXPOSED_COPPER_BULB:
+        buy: 125.0
+        sell: 16.0
+        enabled: true
+      WEATHERED_COPPER_BULB:
+        buy: 125.0
+        sell: 16.0
+        enabled: true
+      OXIDIZED_COPPER_BULB:
+        buy: 125.0
+        sell: 16.0
+        enabled: true
+      WAXED_COPPER_BULB:
+        buy: 135.0
+        sell: 17.0
+        enabled: true
+      WAXED_EXPOSED_COPPER_BULB:
+        buy: 135.0
+        sell: 17.0
+        enabled: true
+      WAXED_WEATHERED_COPPER_BULB:
+        buy: 135.0
+        sell: 17.0
+        enabled: true
+      WAXED_OXIDIZED_COPPER_BULB:
+        buy: 135.0
+        sell: 17.0
+        enabled: true
+  food:
+    name: Nourriture
+    icon: COOKED_BEEF
+    enabled: true
+    items:
+      MUSHROOM_STEW:
+        buy: 15.0
+        sell: 1.9
+        enabled: true
+      PORKCHOP:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      GOLDEN_APPLE:
+        buy: 522.0
+        sell: -1.0
+        enabled: true
+      ENCHANTED_GOLDEN_APPLE:
+        buy: 30000.0
+        sell: -1.0
+        enabled: true
+      MILK_BUCKET:
+        buy: 60.0
+        sell: 9.0
+        enabled: true
+      COD:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      SALMON:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      TROPICAL_FISH:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      DRIED_KELP:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      BEEF:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      COOKED_BEEF:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+      CHICKEN:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      BAKED_POTATO:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      POISONOUS_POTATO:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      RABBIT:
+        buy: 7.0
+        sell: 1.0
+        enabled: true
+      COOKED_RABBIT:
+        buy: 14.0
+        sell: 1.9
+        enabled: true
+      RABBIT_STEW:
+        buy: 25.0
+        sell: 3.8
+        enabled: true
+      MUTTON:
+        buy: 7.0
+        sell: 1.0
+        enabled: true
+      COOKED_MUTTON:
+        buy: 18.0
+        sell: 2.7
+        enabled: true
+      CHORUS_FRUIT:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      BEETROOT_SOUP:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      HONEY_BOTTLE:
+        buy: 20.0
+        sell: 3.0
+        enabled: true
+  farming:
+    name: Agriculture
+    icon: WHEAT
+    enabled: true
+    items:
+      SUGAR_CANE:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      KELP:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      BAMBOO:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      CACTUS:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      PUMPKIN:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      CARVED_PUMPKIN:
+        buy: 14.0
+        sell: 1.9
+        enabled: true
+      MELON:
+        buy: 30.0
+        sell: 4.0
+        enabled: true
+      HAY_BLOCK:
+        buy: 45.0
+        sell: 6.8
+        enabled: true
+      WHEAT_SEEDS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      WHEAT:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      DRIED_KELP_BLOCK:
+        buy: 36.0
+        sell: 5.4
+        enabled: true
+      EGG:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      BLUE_EGG:
+        buy: 8.0
+        sell: 1.1
+        enabled: true
+      BROWN_EGG:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      COCOA_BEANS:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+      BONE_MEAL:
+        buy: 8.0
+        sell: 0.3
+        enabled: true
+      SUGAR:
+        buy: 7.5
+        sell: 0.6
+        enabled: true
+      MELON_SLICE:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      PUMPKIN_SEEDS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      MELON_SEEDS:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      NETHER_WART:
+        buy: 27.0
+        sell: 2.1
+        enabled: true
+      CARROT:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      POTATO:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      TORCHFLOWER_SEEDS:
+        buy: 30.0
+        sell: 4.5
+        enabled: true
+      PITCHER_POD:
+        buy: 30.0
+        sell: 4.5
+        enabled: true
+      BEETROOT:
+        buy: 5.0
+        sell: 0.7
+        enabled: true
+      BEETROOT_SEEDS:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      COMPOSTER:
+        buy: 10.0
+        sell: 1.4
+        enabled: true
+      SWEET_BERRIES:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      GLOW_BERRIES:
+        buy: 6.0
+        sell: 0.8
+        enabled: true
+  mobs:
+    name: Drops de mobs
+    icon: BONE
+    enabled: true
+    items:
+      HEAVY_CORE:
+        buy: 27000.0
+        sell: 2700.0
+        enabled: true
+      PHANTOM_MEMBRANE:
+        buy: 60.0
+        sell: 9.0
+        enabled: true
+      TURTLE_SCUTE:
+        buy: 80.0
+        sell: 14.0
+        enabled: true
+      ARMADILLO_SCUTE:
+        buy: 25.0
+        sell: 4.5
+        enabled: true
+      FEATHER:
+        buy: 4.0
+        sell: 0.7
+        enabled: true
+      GUNPOWDER:
+        buy: 27.0
+        sell: 2.5
+        enabled: true
+      LEATHER:
+        buy: 8.0
+        sell: 1.3
+        enabled: true
+      SLIME_BALL:
+        buy: 15.0
+        sell: 2.2
+        enabled: true
+      INK_SAC:
+        buy: 6.0
+        sell: 1.0
+        enabled: true
+      GLOW_INK_SAC:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      BONE:
+        buy: 6.0
+        sell: 1.0
+        enabled: true
+      ROTTEN_FLESH:
+        buy: 3.0
+        sell: 0.5
+        enabled: true
+      BLAZE_ROD:
+        buy: 90.0
+        sell: 6.6
+        enabled: true
+      GHAST_TEAR:
+        buy: 525.0
+        sell: 35.0
+        enabled: true
+      SPIDER_EYE:
+        buy: 8.0
+        sell: 1.3
+        enabled: true
+      ENDER_EYE:
+        buy: 135.0
+        sell: -1.0
+        enabled: true
+      FIRE_CHARGE:
+        buy: 30.0
+        sell: -1.0
+        enabled: true
+      WIND_CHARGE:
+        buy: 14.0
+        sell: -1.0
+        enabled: true
+      WITHER_SKELETON_SKULL:
+        buy: -1.0
+        sell: 520.0
+        enabled: true
+      NETHER_STAR:
+        buy: -1.0
+        sell: 3500.0
+        enabled: true
+      PRISMARINE_SHARD:
+        buy: 24.0
+        sell: 2.0
+        enabled: true
+      PRISMARINE_CRYSTALS:
+        buy: 15.0
+        sell: 2.7
+        enabled: true
+      RABBIT_FOOT:
+        buy: 90.0
+        sell: 22.0
+        enabled: true
+      RABBIT_HIDE:
+        buy: 8.0
+        sell: 1.3
+        enabled: true
+      DRAGON_BREATH:
+        buy: 172.0
+        sell: 48.0
+        enabled: true
+      NAUTILUS_SHELL:
+        buy: 170.0
+        sell: 56.0
+        enabled: true
+      HEART_OF_THE_SEA:
+        buy: 3120.0
+        sell: 385.0
+        enabled: true
+      HONEYCOMB:
+        buy: 15.0
+        sell: 2.7
+        enabled: true
+      ECHO_SHARD:
+        buy: 870.0
+        sell: 96.0
+        enabled: true
+      TRIAL_KEY:
+        buy: 575.0
+        sell: 190.0
+        enabled: true
+      OMINOUS_TRIAL_KEY:
+        buy: 1560.0
+        sell: 575.0
+        enabled: true
+  tools:
+    name: Outils & armes
+    icon: DIAMOND_PICKAXE
+    enabled: true
+    items:
+      CARROT_ON_A_STICK:
+        buy: 30.0
+        sell: 5.2
+        enabled: true
+      WARPED_FUNGUS_ON_A_STICK:
+        buy: 40.0
+        sell: 6.3
+        enabled: true
+      FLINT_AND_STEEL:
+        buy: 45.0
+        sell: -1.0
+        enabled: true
+      WOODEN_SWORD:
+        buy: 6.0
+        sell: -1.0
+        enabled: true
+      WOODEN_SHOVEL:
+        buy: 4.0
+        sell: 0.6
+        enabled: true
+      WOODEN_PICKAXE:
+        buy: 9.0
+        sell: 1.2
+        enabled: true
+      WOODEN_AXE:
+        buy: 9.0
+        sell: -1.0
+        enabled: true
+      WOODEN_HOE:
+        buy: 7.0
+        sell: 0.9
+        enabled: true
+      COPPER_SWORD:
+        buy: 19.0
+        sell: -1.0
+        enabled: true
+      COPPER_SHOVEL:
+        buy: 11.0
+        sell: 1.5
+        enabled: true
+      COPPER_PICKAXE:
+        buy: 29.0
+        sell: 3.9
+        enabled: true
+      COPPER_AXE:
+        buy: 29.0
+        sell: -1.0
+        enabled: true
+      COPPER_HOE:
+        buy: 20.0
+        sell: 2.7
+        enabled: true
+      STONE_SWORD:
+        buy: 6.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_SWORD:
+        buy: 67.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_SHOVEL:
+        buy: 35.0
+        sell: 4.8
+        enabled: true
+      GOLDEN_PICKAXE:
+        buy: 115.0
+        sell: 23.0
+        enabled: true
+      GOLDEN_AXE:
+        buy: 115.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_HOE:
+        buy: 68.0
+        sell: 9.3
+        enabled: true
+      SPECTRAL_ARROW:
+        buy: 21.0
+        sell: -1.0
+        enabled: true
+      WOODEN_SPEAR:
+        buy: 7.0
+        sell: -1.0
+        enabled: true
+      STONE_SPEAR:
+        buy: 7.0
+        sell: -1.0
+        enabled: true
+      COPPER_SPEAR:
+        buy: 20.0
+        sell: -1.0
+        enabled: true
+      IRON_SPEAR:
+        buy: 55.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_SPEAR:
+        buy: 68.0
+        sell: -1.0
+        enabled: true
+      DIAMOND_SPEAR:
+        buy: 570.0
+        sell: -1.0
+        enabled: true
+      TOTEM_OF_UNDYING:
+        buy: 8000.0
+        sell: -1.0
+        enabled: true
+      BRUSH:
+        buy: 30.0
+        sell: 1.9
+        enabled: true
+  armor:
+    name: Armures
+    icon: DIAMOND_CHESTPLATE
+    enabled: true
+    items:
+      TURTLE_HELMET:
+        buy: 460.0
+        sell: -1.0
+        enabled: true
+      WOLF_ARMOR:
+        buy: 230.0
+        sell: -1.0
+        enabled: true
+      COPPER_HELMET:
+        buy: 44.0
+        sell: -1.0
+        enabled: true
+      COPPER_CHESTPLATE:
+        buy: 70.0
+        sell: -1.0
+        enabled: true
+      COPPER_LEGGINGS:
+        buy: 62.0
+        sell: -1.0
+        enabled: true
+      COPPER_BOOTS:
+        buy: 35.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_HELMET:
+        buy: 190.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_CHESTPLATE:
+        buy: 305.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_LEGGINGS:
+        buy: 265.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_BOOTS:
+        buy: 150.0
+        sell: -1.0
+        enabled: true
+      COPPER_HORSE_ARMOR:
+        buy: 90.0
+        sell: -1.0
+        enabled: true
+      IRON_HORSE_ARMOR:
+        buy: 170.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_HORSE_ARMOR:
+        buy: 290.0
+        sell: -1.0
+        enabled: true
+      DIAMOND_HORSE_ARMOR:
+        buy: 780.0
+        sell: -1.0
+        enabled: true
+      IRON_NAUTILUS_ARMOR:
+        buy: 230.0
+        sell: -1.0
+        enabled: true
+      GOLDEN_NAUTILUS_ARMOR:
+        buy: 370.0
+        sell: -1.0
+        enabled: true
+      DIAMOND_NAUTILUS_ARMOR:
+        buy: 910.0
+        sell: -1.0
+        enabled: true
+      COPPER_NAUTILUS_ARMOR:
+        buy: 140.0
+        sell: -1.0
+        enabled: true
+  redstone:
+    name: Redstone & transport
+    icon: REDSTONE
+    enabled: true
+    items:
+      REDSTONE_TORCH:
+        buy: 10.0
+        sell: 1.3
+        enabled: true
+      REPEATER:
+        buy: 25.0
+        sell: 4.5
+        enabled: true
+      COMPARATOR:
+        buy: 60.0
+        sell: 8.5
+        enabled: true
+      PISTON:
+        buy: 40.0
+        sell: 6.0
+        enabled: true
+      STICKY_PISTON:
+        buy: 60.0
+        sell: 8.2
+        enabled: true
+      SLIME_BLOCK:
+        buy: 155.0
+        sell: 31.0
+        enabled: true
+      HONEY_BLOCK:
+        buy: 80.0
+        sell: 12.0
+        enabled: true
+      OBSERVER:
+        buy: 50.0
+        sell: 6.5
+        enabled: true
+      HOPPER:
+        buy: 80.0
+        sell: 14.0
+        enabled: true
+      DISPENSER:
+        buy: 40.0
+        sell: 7.2
+        enabled: true
+      DROPPER:
+        buy: 35.0
+        sell: 3.3
+        enabled: true
+      TARGET:
+        buy: 40.0
+        sell: 7.2
+        enabled: true
+      LEVER:
+        buy: 4.0
+        sell: 0.4
+        enabled: true
+      LIGHTNING_ROD:
+        buy: 24.0
+        sell: 3.6
+        enabled: true
+      DAYLIGHT_DETECTOR:
+        buy: 80.0
+        sell: 10.0
+        enabled: true
+      SCULK_SENSOR:
+        buy: 115.0
+        sell: 23.0
+        enabled: true
+      CALIBRATED_SCULK_SENSOR:
+        buy: 230.0
+        sell: 40.0
+        enabled: true
+      TRAPPED_CHEST:
+        buy: 30.0
+        sell: 5.4
+        enabled: true
+      TNT:
+        buy: 180.0
+        sell: -1.0
+        enabled: true
+      REDSTONE_LAMP:
+        buy: 45.0
+        sell: 8.4
+        enabled: true
+      NOTE_BLOCK:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      STONE_BUTTON:
+        buy: 3.0
+        sell: 0.5
+        enabled: true
+      POLISHED_BLACKSTONE_BUTTON:
+        buy: 4.0
+        sell: 0.7
+        enabled: true
+      STONE_PRESSURE_PLATE:
+        buy: 8.0
+        sell: 1.2
+        enabled: true
+      POLISHED_BLACKSTONE_PRESSURE_PLATE:
+        buy: 16.0
+        sell: 2.4
+        enabled: true
+      LIGHT_WEIGHTED_PRESSURE_PLATE:
+        buy: 40.0
+        sell: 7.2
+        enabled: true
+      HEAVY_WEIGHTED_PRESSURE_PLATE:
+        buy: 40.0
+        sell: 5.4
+        enabled: true
+      DETECTOR_RAIL:
+        buy: 40.0
+        sell: -1.0
+        enabled: true
+      ACTIVATOR_RAIL:
+        buy: 40.0
+        sell: -1.0
+        enabled: true
+      CHEST_MINECART:
+        buy: 115.0
+        sell: -1.0
+        enabled: true
+      FURNACE_MINECART:
+        buy: 115.0
+        sell: -1.0
+        enabled: true
+      TNT_MINECART:
+        buy: 280.0
+        sell: -1.0
+        enabled: true
+      HOPPER_MINECART:
+        buy: 170.0
+        sell: -1.0
+        enabled: true
+      CRAFTER:
+        buy: 230.0
+        sell: 37.0
+        enabled: true
+  decoration:
+    name: Décoration
+    icon: PAINTING
+    enabled: true
+    items:
+      CHISELED_BOOKSHELF:
+        buy: 60.0
+        sell: 2.5
+        enabled: true
+      DECORATED_POT:
+        buy: 60.0
+        sell: 2.4
+        enabled: true
+      TORCH:
+        buy: 2.0
+        sell: 0.3
+        enabled: true
+      END_ROD:
+        buy: 30.0
+        sell: 1.8
+        enabled: true
+      CHEST:
+        buy: 16.0
+        sell: 2.4
+        enabled: true
+      CRAFTING_TABLE:
+        buy: 8.0
+        sell: 1.2
+        enabled: true
+      FURNACE:
+        buy: 8.0
+        sell: 1.3
+        enabled: true
+      LADDER:
+        buy: 3.0
+        sell: 0.4
+        enabled: true
+      JACK_O_LANTERN:
+        buy: 14.0
+        sell: 2.3
+        enabled: true
+      SOUL_TORCH:
+        buy: 4.0
+        sell: 0.5
+        enabled: true
+      COPPER_TORCH:
+        buy: 12.0
+        sell: 0.3
+        enabled: true
+      IRON_BARS:
+        buy: 14.0
+        sell: 1.0
+        enabled: true
+      COPPER_BARS:
+        buy: 14.0
+        sell: 0.4
+        enabled: true
+      EXPOSED_COPPER_BARS:
+        buy: 14.0
+        sell: 2.3
+        enabled: true
+      WEATHERED_COPPER_BARS:
+        buy: 14.0
+        sell: 2.3
+        enabled: true
+      OXIDIZED_COPPER_BARS:
+        buy: 14.0
+        sell: 2.3
+        enabled: true
+      WAXED_COPPER_BARS:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      WAXED_EXPOSED_COPPER_BARS:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      WAXED_WEATHERED_COPPER_BARS:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      WAXED_OXIDIZED_COPPER_BARS:
+        buy: 20.0
+        sell: 3.6
+        enabled: true
+      COPPER_CHAIN:
+        buy: 12.0
+        sell: 1.5
+        enabled: true
+      EXPOSED_COPPER_CHAIN:
+        buy: 12.0
+        sell: 2.0
+        enabled: true
+      WEATHERED_COPPER_CHAIN:
+        buy: 12.0
+        sell: 2.0
+        enabled: true
+      OXIDIZED_COPPER_CHAIN:
+        buy: 12.0
+        sell: 2.0
+        enabled: true
+      WAXED_COPPER_CHAIN:
+        buy: 18.0
+        sell: 3.2
+        enabled: true
+      WAXED_EXPOSED_COPPER_CHAIN:
+        buy: 18.0
+        sell: 3.2
+        enabled: true
+      WAXED_WEATHERED_COPPER_CHAIN:
+        buy: 18.0
+        sell: 3.2
+        enabled: true
+      WAXED_OXIDIZED_COPPER_CHAIN:
+        buy: 18.0
+        sell: 3.2
+        enabled: true
+      SCAFFOLDING:
+        buy: 6.0
+        sell: 0.6
+        enabled: true
+      LECTERN:
+        buy: 40.0
+        sell: 7.2
+        enabled: true
+      GLOW_ITEM_FRAME:
+        buy: 35.0
+        sell: 4.8
+        enabled: true
+      FLOWER_POT:
+        buy: 6.0
+        sell: 1.0
+        enabled: true
+      SKELETON_SKULL:
+        buy: 575.0
+        sell: 115.0
+        enabled: true
+      ZOMBIE_HEAD:
+        buy: 460.0
+        sell: 90.0
+        enabled: true
+      CREEPER_HEAD:
+        buy: 1040.0
+        sell: 230.0
+        enabled: true
+      DRAGON_HEAD:
+        buy: 7500.0
+        sell: 1800.0
+        enabled: true
+      PIGLIN_HEAD:
+        buy: 780.0
+        sell: 175.0
+        enabled: true
+      ARMOR_STAND:
+        buy: 15.0
+        sell: 1.3
+        enabled: true
+      BARREL:
+        buy: 10.0
+        sell: 1.7
+        enabled: true
+      SOUL_LANTERN:
+        buy: 30.0
+        sell: 3.0
+        enabled: true
+      COPPER_LANTERN:
+        buy: 30.0
+        sell: 3.0
+        enabled: true
+      EXPOSED_COPPER_LANTERN:
+        buy: 30.0
+        sell: 5.4
+        enabled: true
+      WEATHERED_COPPER_LANTERN:
+        buy: 30.0
+        sell: 5.4
+        enabled: true
+      OXIDIZED_COPPER_LANTERN:
+        buy: 30.0
+        sell: 5.4
+        enabled: true
+      WAXED_COPPER_LANTERN:
+        buy: 36.0
+        sell: 6.6
+        enabled: true
+      WAXED_EXPOSED_COPPER_LANTERN:
+        buy: 36.0
+        sell: 6.6
+        enabled: true
+      WAXED_WEATHERED_COPPER_LANTERN:
+        buy: 36.0
+        sell: 6.6
+        enabled: true
+      WAXED_OXIDIZED_COPPER_LANTERN:
+        buy: 36.0
+        sell: 6.6
+        enabled: true
+      SOUL_CAMPFIRE:
+        buy: 25.0
+        sell: 4.5
+        enabled: true
+      CANDLE:
+        buy: 12.0
+        sell: 2.0
+        enabled: true
+  brewing:
+    name: Alchimie & XP
+    icon: BREWING_STAND
+    enabled: true
+    items:
+      ENCHANTING_TABLE:
+        buy: 690.0
+        sell: 76.0
+        enabled: true
+      ANVIL:
+        buy: 255.0
+        sell: 28.0
+        enabled: true
+      CHIPPED_ANVIL:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      DAMAGED_ANVIL:
+        buy: 80.0
+        sell: 24.0
+        enabled: true
+      GLOWSTONE_DUST:
+        buy: 10.0
+        sell: 2.8
+        enabled: true
+      PUFFERFISH:
+        buy: 15.0
+        sell: 4.5
+        enabled: true
+      GLASS_BOTTLE:
+        buy: 4.0
+        sell: 0.9
+        enabled: true
+      FERMENTED_SPIDER_EYE:
+        buy: 60.0
+        sell: 2.7
+        enabled: true
+      BLAZE_POWDER:
+        buy: 44.0
+        sell: 2.2
+        enabled: true
+      MAGMA_CREAM:
+        buy: 38.0
+        sell: 4.5
+        enabled: true
+      BREWING_STAND:
+        buy: 135.0
+        sell: 9.0
+        enabled: true
+      CAULDRON:
+        buy: 150.0
+        sell: 25.0
+        enabled: true
+  discs:
+    name: Musique
+    icon: MUSIC_DISC_CAT
+    enabled: true
+    items:
+      JUKEBOX:
+        buy: 230.0
+        sell: 38.0
+        enabled: true
+      MUSIC_DISC_13:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_CAT:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_BLOCKS:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_CHIRP:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_CREATOR:
+        buy: 1560.0
+        sell: 575.0
+        enabled: true
+      MUSIC_DISC_CREATOR_MUSIC_BOX:
+        buy: 1560.0
+        sell: 575.0
+        enabled: true
+      MUSIC_DISC_FAR:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_LAVA_CHICKEN:
+        buy: 910.0
+        sell: 335.0
+        enabled: true
+      MUSIC_DISC_MALL:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_MELLOHI:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_STAL:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_STRAD:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_WARD:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_11:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_WAIT:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      MUSIC_DISC_OTHERSIDE:
+        buy: 1950.0
+        sell: 720.0
+        enabled: true
+      MUSIC_DISC_RELIC:
+        buy: 1560.0
+        sell: 575.0
+        enabled: true
+      MUSIC_DISC_5:
+        buy: 1950.0
+        sell: 675.0
+        enabled: true
+      MUSIC_DISC_PIGSTEP:
+        buy: 1950.0
+        sell: 720.0
+        enabled: true
+      MUSIC_DISC_PRECIPICE:
+        buy: 1560.0
+        sell: 575.0
+        enabled: true
+      MUSIC_DISC_TEARS:
+        buy: 1300.0
+        sell: 480.0
+        enabled: true
+      DISC_FRAGMENT_5:
+        buy: 345.0
+        sell: 115.0
+        enabled: true
+      GOAT_HORN:
+        buy: 345.0
+        sell: 115.0
+        enabled: true
+  templates:
+    name: Modèles & poteries
+    icon: NETHERITE_UPGRADE_SMITHING_TEMPLATE
+    enabled: true
+    items:
+      FLOWER_BANNER_PATTERN:
+        buy: 170.0
+        sell: 1.8
+        enabled: true
+      CREEPER_BANNER_PATTERN:
+        buy: 290.0
+        sell: 96.0
+        enabled: true
+      SKULL_BANNER_PATTERN:
+        buy: 460.0
+        sell: 150.0
+        enabled: true
+      MOJANG_BANNER_PATTERN:
+        buy: 780.0
+        sell: 290.0
+        enabled: true
+      GLOBE_BANNER_PATTERN:
+        buy: 345.0
+        sell: 115.0
+        enabled: true
+      PIGLIN_BANNER_PATTERN:
+        buy: 230.0
+        sell: 76.0
+        enabled: true
+      FLOW_BANNER_PATTERN:
+        buy: 575.0
+        sell: 190.0
+        enabled: true
+      GUSTER_BANNER_PATTERN:
+        buy: 575.0
+        sell: 190.0
+        enabled: true
+      FIELD_MASONED_BANNER_PATTERN:
+        buy: 170.0
+        sell: 5.8
+        enabled: true
+      BORDURE_INDENTED_BANNER_PATTERN:
+        buy: 170.0
+        sell: 1.8
+        enabled: true
+      SENTRY_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 910.0
+        sell: 220.0
+        enabled: true
+      DUNE_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 910.0
+        sell: 220.0
+        enabled: true
+      COAST_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 910.0
+        sell: 220.0
+        enabled: true
+      WILD_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      WARD_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1950.0
+        sell: 320.0
+        enabled: true
+      EYE_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1950.0
+        sell: 320.0
+        enabled: true
+      VEX_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1950.0
+        sell: 320.0
+        enabled: true
+      TIDE_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1040.0
+        sell: 235.0
+        enabled: true
+      SNOUT_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1040.0
+        sell: 230.0
+        enabled: true
+      RIB_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      SPIRE_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1560.0
+        sell: 285.0
+        enabled: true
+      WAYFINDER_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      SHAPER_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 2600.0
+        sell: 380.0
+        enabled: true
+      RAISER_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      HOST_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 245.0
+        enabled: true
+      FLOW_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1560.0
+        sell: 285.0
+        enabled: true
+      BOLT_ARMOR_TRIM_SMITHING_TEMPLATE:
+        buy: 1170.0
+        sell: 255.0
+        enabled: true
+      ANGLER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      ARCHER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      ARMS_UP_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      BLADE_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      BREWER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      BURN_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      DANGER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      EXPLORER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      FLOW_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      FRIEND_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      GUSTER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      HEART_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      HEARTBREAK_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      HOWL_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      MINER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      MOURNER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      PLENTY_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      PRIZE_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      SCRAPE_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      SHEAF_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      SHELTER_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      SKULL_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+      SNORT_POTTERY_SHERD:
+        buy: 140.0
+        sell: 46.0
+        enabled: true
+  misc:
+    name: Divers
+    icon: CHEST
+    enabled: true
+    items:
+      BEACON:
+        buy: 12000.0
+        sell: 1920.0
+        enabled: true
+      POWERED_RAIL:
+        buy: 25.0
+        sell: -1.0
+        enabled: true
+      RAIL:
+        buy: 6.0
+        sell: -1.0
+        enabled: true
+      MINECART:
+        buy: 40.0
+        sell: -1.0
+        enabled: true
+      BOWL:
+        buy: 3.0
+        sell: 0.2
+        enabled: true
+      STICK:
+        buy: 1.0
+        sell: 0.1
+        enabled: true
+      FLINT:
+        buy: 4.0
+        sell: 0.7
+        enabled: true
+      BUCKET:
+        buy: 55.0
+        sell: 8.1
+        enabled: true
+      WATER_BUCKET:
+        buy: 87.0
+        sell: -1.0
+        enabled: true
+      LAVA_BUCKET:
+        buy: 120.0
+        sell: -1.0
+        enabled: true
+      POWDER_SNOW_BUCKET:
+        buy: 90.0
+        sell: -1.0
+        enabled: true
+      SNOWBALL:
+        buy: 1.0
+        sell: 0.2
+        enabled: true
+      PUFFERFISH_BUCKET:
+        buy: 80.0
+        sell: 14.0
+        enabled: true
+      SALMON_BUCKET:
+        buy: 75.0
+        sell: 13.0
+        enabled: true
+      COD_BUCKET:
+        buy: 70.0
+        sell: 13.0
+        enabled: true
+      TROPICAL_FISH_BUCKET:
+        buy: 85.0
+        sell: 16.0
+        enabled: true
+      AXOLOTL_BUCKET:
+        buy: 170.0
+        sell: 34.0
+        enabled: true
+      TADPOLE_BUCKET:
+        buy: 115.0
+        sell: 23.0
+        enabled: true
+      BRICK:
+        buy: 4.0
+        sell: 0.7
+        enabled: true
+      CLAY_BALL:
+        buy: 1.5
+        sell: 0.2
+        enabled: true
+      PAPER:
+        buy: 3.0
+        sell: 0.5
+        enabled: true
+      BOOK:
+        buy: 12.0
+        sell: 2.0
+        enabled: true
+      RECOVERY_COMPASS:
+        buy: 1040.0
+        sell: 230.0
+        enabled: true
+      SPYGLASS:
+        buy: 50.0
+        sell: 5.4
+        enabled: true
+      WRITABLE_BOOK:
+        buy: 30.0
+        sell: 3.3
+        enabled: true
+      FIREWORK_ROCKET:
+        buy: 30.0
+        sell: -1.0
+        enabled: true
+      NETHER_BRICK:
+        buy: 3.0
+        sell: 0.5
+        enabled: true
+      RESIN_BRICK:
+        buy: 4.0
+        sell: 0.7
+        enabled: true
+      LEAD:
+        buy: 25.0
+        sell: 2.2
+        enabled: true
+      END_CRYSTAL:
+        buy: 690.0
+        sell: -1.0
+        enabled: true
+      POPPED_CHORUS_FRUIT:
+        buy: 18.0
+        sell: 3.2
+        enabled: true
