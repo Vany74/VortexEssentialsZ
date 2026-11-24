@@ -1,0 +1,125 @@
+# Recettes de VortexEssentials — modifiables, puis /vortex reload.
+#
+# Deux formes :
+#   shape + ingredients : grille (max 3x3), une lettre = un ingrédient
+#   shapeless           : liste d'ingrédients sans forme
+# Ingrédient : nom de Material (ex: DIAMOND_BLOCK) ou tag ("#logs", "#planks").
+#
+# transfer-from  : l'ingrédient de ce Material transmet ses enchantements et sa durabilité au résultat.
+# require-custom : l'ingrédient de ce Material doit être précisément cet item Vortex
+#                  (ex: l'amélioration Super Lumberjack exige VOTRE Lumberjack's Axe).
+#
+# upgrades (table de forge) : améliorations en netherite. Elles utilisent la recette vanilla
+# (modèle d'amélioration netherite + lingot de netherite) ; le résultat est remplacé par l'item Vortex.
+# Les armes mythiques (Sealord, Lightspeed, Mintus) restent forgeables une seule fois par serveur.
+
+recipes:
+  # ───────── Consommables ─────────
+  panacea:
+    shapeless: [GLOWSTONE, HONEY_BOTTLE, GLASS_BOTTLE]
+  crystallization_shard:
+    shape: ["AAA", "ABA", "AAA"]
+    ingredients: {"A": AMETHYST_SHARD, "B": AMETHYST_BLOCK}
+  agony:
+    shapeless: [SPIDER_EYE, WITHER_ROSE, SPLASH_POTION]
+
+  # ───────── Outils ─────────
+  smelter_pickaxe:
+    shapeless: [FURNACE, BLAZE_ROD, IRON_PICKAXE]
+    transfer-from: IRON_PICKAXE
+  super_smelter_pickaxe:
+    shapeless: [BLAST_FURNACE, MAGMA_BLOCK, DIAMOND_PICKAXE]
+    transfer-from: DIAMOND_PICKAXE
+  explosive_pickaxe:
+    shapeless: [TNT, FIRE_CHARGE, DIAMOND_PICKAXE]
+    transfer-from: DIAMOND_PICKAXE
+  lumberjack_axe:
+    shape: ["LLL", "LAL", "LLL"]
+    ingredients: {"L": "#logs", "A": IRON_AXE}
+    transfer-from: IRON_AXE
+  super_lumberjack_axe:
+    shape: ["DDD", "DAD", "DDD"]
+    ingredients: {"D": DIAMOND, "A": IRON_AXE}
+    require-custom: {IRON_AXE: lumberjack_axe}
+    transfer-from: IRON_AXE
+
+  # ───────── Outils mythiques ─────────
+  fractured:
+    shape: ["NAN", "APA", "NAN"]
+    ingredients: {"N": NETHERITE_BLOCK, "A": ANCIENT_DEBRIS, "P": NETHERITE_PICKAXE}
+  terraloop:
+    shape: ["NAN", "AXA", "NAN"]
+    ingredients: {"N": NETHERITE_BLOCK, "A": ANCIENT_DEBRIS, "X": NETHERITE_AXE}
+
+  jugas:
+    shape: ["NAN", "ASA", "NAN"]
+    ingredients: {"N": NETHERITE_BLOCK, "A": ANCIENT_DEBRIS, "S": NETHERITE_SHOVEL}
+
+  # ───────── Armes légendaires ─────────
+  blazing_crossbow:
+    shapeless: [BLAZE_POWDER, BLAZE_ROD, CROSSBOW]
+    transfer-from: CROSSBOW
+  reaper_scythe:
+    shape: ["SGS", "GNG", "SGS"]
+    ingredients: {"S": SOUL_SAND, "G": GHAST_TEAR, "N": NETHERITE_SWORD}
+  excalibur:
+    shape: ["DGD", "GNG", "DGD"]
+    ingredients: {"D": DIAMOND_BLOCK, "G": GOLD_BLOCK, "N": NETHERITE_SWORD}
+  evoker_wand:
+    shape: ["PTP", "PNP", "PTP"]
+    ingredients: {"P": ENDER_PEARL, "T": TOTEM_OF_UNDYING, "N": NETHERITE_SWORD}
+  chrono_sword:
+    shape: ["CAC", "ANA", "CAC"]
+    ingredients: {"C": CLOCK, "A": AMETHYST_BLOCK, "N": NETHERITE_SWORD}
+  sceptre_of_arachne:
+    shape: ["WSW", "SNS", "WSW"]
+    ingredients: {"W": COBWEB, "S": STRING, "N": NETHERITE_SWORD}
+  magma_club:
+    shape: ["MBM", "BNB", "MBM"]
+    ingredients: {"M": MAGMA_BLOCK, "B": BLAZE_ROD, "N": NETHERITE_SWORD}
+
+  # ───────── Armes mythiques (forge unique) ─────────
+  sealord:
+    shape: ["DSD", "ITI", "DSD"]
+    ingredients: {"D": DIAMOND, "S": NAUTILUS_SHELL, "I": NETHERITE_INGOT, "T": TRIDENT}
+  lightspeed:
+    shape: ["DFD", "FNF", "DFD"]
+    ingredients: {"D": DIAMOND, "F": FEATHER, "N": NETHERITE_SWORD}
+  mintus:
+    shape: ["CGC", "DID"]
+    ingredients: {"C": COAL_BLOCK, "G": GOLDEN_APPLE, "D": DIAMOND, "I": NETHERITE_INGOT}
+
+  skyfall:
+    shape: ["NSN", "EBE", "NSN"]
+    ingredients: {"N": NETHERITE_INGOT, "S": NETHER_STAR, "E": BREEZE_ROD, "B": BOW}
+  voidrender:
+    shape: ["NSN", "ECE", "NSN"]
+    ingredients: {"N": NETHERITE_INGOT, "S": NETHER_STAR, "E": ECHO_SHARD, "C": CROSSBOW}
+  umbral_scythe:
+    shape: ["  N", " HN", "B N"]
+    ingredients: {"N": NETHERITE_INGOT, "H": HEAVY_CORE, "B": BREEZE_ROD}
+  colossus_plate:
+    shape: ["NSN", "BCB", "NSN"]
+    ingredients: {"N": NETHERITE_BLOCK, "S": NETHER_STAR, "B": TOTEM_OF_UNDYING, "C": NETHERITE_CHESTPLATE}
+  phantom_treads:
+    shape: ["NSN", "EBE", "NSN"]
+    ingredients: {"N": NETHERITE_BLOCK, "S": NETHER_STAR, "E": ECHO_SHARD, "B": NETHERITE_BOOTS}
+  radiant_crown:
+    shape: ["NSN", "BHB", "NSN"]
+    ingredients: {"N": NETHERITE_BLOCK, "S": NETHER_STAR, "B": HEART_OF_THE_SEA, "H": NETHERITE_HELMET}
+  ember_greaves:
+    shape: ["NSN", "MLM", "NSN"]
+    ingredients: {"N": NETHERITE_BLOCK, "S": NETHER_STAR, "M": MAGMA_BLOCK, "L": NETHERITE_LEGGINGS}
+  stormpiercer:
+    shape: ["NLN", "BSB", "NHN"]
+    ingredients: {"N": NETHERITE_BLOCK, "L": LIGHTNING_ROD, "B": BREEZE_ROD, "S": NETHERITE_SPEAR, "H": HEAVY_CORE}
+  all_in_one:
+    shape: ["BSM", "GGG", " W "]
+    ingredients: {"B": BLAZE_POWDER, "S": SUGAR, "M": MAGMA_CREAM, "G": GUNPOWDER, "W": GLASS_BOTTLE}
+  holy_master:
+    shape: ["MTM", "GDG", "PWP"]
+    ingredients: {"M": GLISTERING_MELON_SLICE, "T": TURTLE_SCUTE, "G": GHAST_TEAR, "D": DIAMOND_BLOCK, "P": GUNPOWDER, "W": GLASS_BOTTLE}
+upgrades:
+  super_smelter_pickaxe: netherite_smelter_pickaxe
+  explosive_pickaxe: netherite_explosive_pickaxe
+  super_lumberjack_axe: netherite_lumberjack_axe

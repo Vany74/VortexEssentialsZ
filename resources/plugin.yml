@@ -1,0 +1,168 @@
+name: VortexEssentials
+version: 2.3.0
+main: fr.vortexsmp.vortexessentials.VortexEssentials
+api-version: '1.21'
+softdepend: [Vault, VaultUnlocked]
+authors: [ItsVany]
+description: Custom items (VortexTools) + enchantment/potion limits (VortexLimit) in one plugin.
+commands:
+  vortex:
+    description: VortexEssentials - items custom, menu, administration
+    aliases: [vt, vortextools, ve, vortexessentials]
+    usage: /vortex [menu|list|preview|tool|hud|lang|recipes|give|mythic|boost|admin|citem|pack|discord|limit|reload|help]
+  shop:
+    description: Boutique du serveur et des joueurs
+    aliases: [boutique, market]
+    usage: /shop [admin|player|mine|balance|sell|sellhand|sellall|manage]
+  sell:
+    description: Menu de vente (déposez des items, vendus à la fermeture)
+    aliases: [vendre]
+    usage: /sell
+  playtime:
+    description: Temps de jeu actif et classement
+    aliases: [pt, temps]
+    usage: /playtime [joueur|top]
+  announce:
+    description: Message dans le chat pour tous les joueurs
+    aliases: [broadcast, bc]
+    usage: /announce [-t] [-b] [-s] <message>
+  maintenance:
+    description: Mode maintenance (seuls staff et liste autorisée entrent)
+    aliases: [maint]
+    usage: /maintenance <on|off|toggle|status|add|remove|list|kick>
+  smp:
+    description: Lancer ou arrêter le SMP, délai de craft des armes
+    usage: /smp <start|stop|status|delay>
+  jail:
+    description: Emprisonner un joueur
+    usage: /jail <joueur> [minutes] [raison]
+  unjail:
+    description: Libérer un joueur
+    usage: /unjail <joueur>
+  setjail:
+    description: Définir une prison
+    usage: /setjail [nom]
+  deljail:
+    description: Supprimer une prison
+    usage: /deljail <nom>
+  jails:
+    description: Liste des prisons et des emprisonnés
+    usage: /jails
+  freeze:
+    description: Geler / dégeler un joueur
+    usage: /freeze <joueur>
+  staffxray:
+    description: X-ray staff (minerais en surbrillance)
+    aliases: [sx]
+    usage: /staffxray [rayon]
+  orders:
+    description: Commandes façon DonutSMP (joueurs et serveur)
+    aliases: [order, commandes]
+    usage: /orders [mine|create|collect|cancel|server]
+  servermenu:
+    description: Menu admin du serveur (gamerules, dimensions, actions globales)
+    aliases: [smenu]
+    usage: /servermenu
+  uspawner:
+    description: Spawners empilables
+    aliases: [us, spawners]
+    usage: /uspawner <help|shop|give|reload|trust|untrust|info|log>
+  staffmod:
+    description: Mode staff à paliers
+    usage: /staffmod [status|list|menu|assign|unassign|tier]
+  bounty:
+    description: Primes sur les joueurs
+    aliases: [bounties, prime]
+    usage: /bounty [<joueur> <montant>|list|check <joueur>]
+  vortexlimit:
+    description: Limites d'enchantements, de potions et bypass
+    aliases: [vlimit, vl]
+    usage: /vortexlimit [menu|search|potions|objects|bypass|type|id|reload]
+permissions:
+  vortexessentials.use:
+    description: Ouvrir le menu et consulter le catalogue
+    default: true
+  vortexessentials.admin:
+    description: give / reload / mythic reset
+    default: op
+  vortexessentials.admin.bypass:
+    description: Ignore les désactivations et limites d'objets de l'administration
+    default: op
+  vortexessentials.limit.admin:
+    description: Gérer les limites (menus et commandes)
+    default: op
+  vortexessentials.limit.bypass:
+    description: Ignorer toutes les limites d'enchantements/potions
+    default: op
+  vortexessentials.shop:
+    description: Utiliser la boutique (acheter, vendre)
+    default: true
+  vortexessentials.shop.list:
+    description: Mettre des items en vente dans la boutique des joueurs
+    default: true
+  vortexessentials.shop.admin:
+    description: Gérer la boutique du serveur (catégories, prix, items)
+    default: op
+  vortexessentials.playtime:
+    description: Consulter le temps de jeu
+    default: true
+  vortexessentials.announce:
+    description: Utiliser /announce
+    default: op
+  vortexessentials.maintenance:
+    description: Gérer le mode maintenance
+    default: op
+  vortexessentials.maintenance.bypass:
+    description: Rejoindre pendant la maintenance
+    default: op
+  vortexessentials.smp:
+    description: Lancer / arrêter le SMP
+    default: op
+  vortexessentials.staff.jail:
+    description: Prison (jail, unjail, setjail...)
+    default: op
+  vortexessentials.staff.freeze:
+    description: Geler un joueur
+    default: op
+  vortexessentials.staff.xray:
+    description: X-ray staff
+    default: op
+  vortexessentials.staff.bypass:
+    description: Ignorer les restrictions de prison / gel
+    default: op
+  ultimatespawners.use:
+    description: Utiliser les spawners
+    default: true
+  ultimatespawners.shop:
+    description: Boutique de spawners
+    default: true
+  ultimatespawners.break:
+    description: Récupérer ses spawners
+    default: true
+  ultimatespawners.admin:
+    description: Administrer les spawners
+    default: op
+  vortexessentials.orders:
+    description: Utiliser les commandes (orders)
+    default: true
+  vortexessentials.orders.admin:
+    description: Commandes du serveur
+    default: op
+  vortexessentials.servermenu:
+    description: Menu admin du serveur
+    default: op
+  vortexessentials.dimension.bypass:
+    description: Ignorer les dimensions désactivées
+    default: op
+  vortexessentials.staffmod:
+    description: Voir et utiliser le mode staff
+    default: op
+  vortexessentials.staffmod.admin:
+    description: Configurer les paliers du mode staff
+    default: op
+  vortexessentials.bounty:
+    description: Utiliser les primes
+    default: true
+  vortexessentials.bounty.admin:
+    description: Administrer les primes
+    default: op

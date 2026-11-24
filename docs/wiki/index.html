@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiki — VortexSMP</title>
+<style>
+:root{--bg:#f6f7f9;--fg:#15171a;--mut:#5d6570;--card:#fff;--line:#dfe3e8;--cell:#eef0f3}
+@media (prefers-color-scheme:dark){:root{--bg:#101215;--fg:#e9ebee;--mut:#9aa3ad;--card:#181b20;--line:#2a2f36;--cell:#222730}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1{margin:0 0 4px;font-size:1.9rem}.sub{color:var(--mut);margin:0 0 20px}
+nav a{margin-right:14px;color:inherit}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+input{flex:1;min-width:220px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+.chip{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--fg);cursor:pointer;font:inherit}
+.chip.on{background:var(--fg);color:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:10px;padding:14px}
+.card header{display:flex;justify-content:space-between;gap:8px;align-items:start}
+.card h3{margin:0;font-size:1.1rem}.badge{font-size:.72rem;color:var(--c);border:1px solid var(--c);border-radius:99px;padding:1px 8px;white-space:nowrap}
+.base{color:var(--mut);font-size:.85rem;margin:4px 0}code{background:var(--cell);padding:1px 5px;border-radius:4px;font-size:.85em}
+.card ul{margin:8px 0;padding-left:18px;font-size:.92rem}.ench{font-size:.82rem;color:var(--mut)}
+.warn{font-size:.82rem;color:#e5484d;margin:6px 0}.note{font-size:.82rem;color:var(--mut);margin:6px 0 0}
+details{margin-top:8px}summary{cursor:pointer;font-weight:600;font-size:.92rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:8px}
+.cell{min-height:52px;background:var(--cell);border-radius:6px;padding:4px;font-size:.72rem;text-align:center;display:flex;align-items:center;justify-content:center;opacity:.45}
+.cell.on{opacity:1;border:1px solid var(--line)}
+section{margin-top:36px}h2{font-size:1.3rem;border-bottom:1px solid var(--line);padding-bottom:6px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:600}
+.pls{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.pl{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.pl .ico{flex:0 0 48px;color:#5865f2}.pl h3{margin:0 0 4px;font-size:1.05rem}.pl small{color:var(--mut);font-weight:400;font-size:.8rem}
+.pl ol{margin:6px 0;padding-left:18px;font-size:.9rem}.cmds{margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px}
+.promo{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;background:linear-gradient(90deg,#5865f2,#9b59f5);color:#fff;border-radius:10px;padding:10px 14px;margin:0 0 16px}
+.promo a{color:#fff;font-weight:700}
+.banner{width:100%;height:auto;border-radius:18px;margin:8px 0}.perks{padding-left:18px}
+.btn{display:inline-block;background:#5865f2;color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:10px}
+.btn.off{background:var(--cell);color:var(--mut)}
+.empty{display:none;color:var(--mut)}footer{margin-top:40px;color:var(--mut);font-size:.85rem}
+</style></head><body><div class="wrap">
+<h1>VortexSMP — Wiki</h1>
+<p class="sub">Items custom, recettes, capacités et grades. <a href="https://votre-boutique.tebex.io">Boutique</a></p>
+<div class="promo"><span>Rejoins la communauté de <b>VortexSMP</b> sur Discord : annonces, aide, événements.</span><a href="#discord">En savoir plus →</a></div>
+<nav><a href="#serveur">Serveur</a><a href="#fonctions">Fonctionnalités</a><a href="#items">Items</a><a href="#legendaires">Armes légendaires</a><a href="#mythic">Règles mythiques</a><a href="#plugins">Plugins</a><a href="#tousplugins">Tous les plugins</a><a href="#shop">Boutique</a><a href="#grades">Grades &amp; boosts</a><a href="#commandes">Commandes</a><a href="#discord">Discord</a></nav>
+<section id="serveur"><h2>Le serveur</h2><ul>
+<li><b>Version</b> : Minecraft Java <b>1.21.11</b> (Paper).</li>
+<li><b>Comptes</b> : <b>premium et crack acceptés</b>. À la première connexion, créez votre mot de passe avec <code>/register</code>, puis utilisez <code>/login</code>.</li>
+<li><b>Temps de jeu</b> : <code>/playtime</code> (ou <code>/pt</code>) affiche votre temps de jeu actif ; <code>/playtime top</code> donne le classement. Le temps ne compte plus quand vous êtes inactif.</li></ul></section>
+<section id="fonctions"><h2>Fonctionnalités de VortexSMP</h2><ul>
+<li><b>Lancement du SMP</b> : les armes légendaires et mythiques se craftent <b>2 jours après le lancement</b>. Chaque craft déclenche un rituel visible par tous.</li>
+<li><b>Commandes</b> (<code>/orders</code>) : demandez des items à un prix unitaire (l'argent est mis de côté) ou livrez les commandes des autres joueurs et celles du serveur pour gagner de l'argent.</li>
+<li><b>Primes</b> (<code>/bounty</code>) : mettez une prime sur un joueur, les primes se cumulent. Celui qui le tue l'encaisse (une petite taxe est retenue).</li>
+<li><b>Spawners</b> (<code>/us shop</code>) : spawners empilables, mobs réels, auto-farm, stockage des drops, améliorations (vitesse, portée, quantité), joueurs autorisés et vente automatique.</li>
+<li><b>Rituels de craft</b> (<code>/vortex rituals</code>) : certains items se craftent avec un rituel : après avoir cliqué sur le résultat, patientez, l'item tombe par terre à la fin.</li>
+<li><b>Boutique</b> : plus votre fortune est grande, plus les prix d'achat augmentent. Les items faciles à fabriquer se revendent à très bas prix.</li>
+<li><b>Crafts spéciaux</b> : trident, pommes d'or, totem, enclume, shulker box, toile d'araignée, slime, miel… ont des recettes modifiées (regardez-les dans <code>/vortex</code> ou en jeu).</li></ul></section>
+<section id="items"><h2>Items (34)</h2>
+<div class="bar"><input id="q" type="search" placeholder="Rechercher un item, une capacité, un ingrédient…" aria-label="Recherche"><button class="chip on" data-cat="ALL">Tous</button><button class="chip" data-cat="TOOL">Outils</button><button class="chip" data-cat="MYTHIC_TOOL">Outils mythiques</button><button class="chip" data-cat="LEGENDARY_WEAPON">Armes légendaires</button><button class="chip" data-cat="MYTHIC_WEAPON">Armes et armures mythiques</button><button class="chip" data-cat="SECRET_WEAPON">Secret Weapons</button><button class="chip" data-cat="CONSUMABLE">Consommables</button></div>
+<div class="cards" id="cards">
+<article class="card" data-cat="TOOL" data-search="smelter&#x27;s pickaxe smelter_pickaxe outils cuit les minerais automatiquement." style="--c:#2bb3d4">
+<header><h3>Smelter&#x27;s Pickaxe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Iron Pickaxe · <code>/vortex give smelter_pickaxe</code></p>
+<ul><li>Cuit les minerais automatiquement.</li></ul>
+<p class="ench">Efficiency 1 · Unbreaking 1 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Furnace</div>
+<div class="cell on">Coal Block</div>
+<div class="cell on">Furnace</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Iron Pickaxe</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Furnace</div>
+<div class="cell on">Coal Block</div>
+<div class="cell on">Furnace</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="super smelter&#x27;s pickaxe super_smelter_pickaxe outils cuit les minerais automatiquement, en plus rapide." style="--c:#2bb3d4">
+<header><h3>Super Smelter&#x27;s Pickaxe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Diamond Pickaxe · <code>/vortex give super_smelter_pickaxe</code></p>
+<ul><li>Cuit les minerais automatiquement, en plus rapide.</li></ul>
+<p class="ench">Efficiency 2 · Unbreaking 1 · Fortune 1 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Coal Block</div>
+<div class="cell on">Blast Furnace</div>
+<div class="cell on">Coal Block</div>
+<div class="cell on">Diamond</div>
+<div class="cell on">Diamond Pickaxe</div>
+<div class="cell on">Diamond</div>
+<div class="cell on">Coal Block</div>
+<div class="cell on">Diamond</div>
+<div class="cell on">Coal Block</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="netherite smelter&#x27;s pickaxe netherite_smelter_pickaxe outils cuit les minerais automatiquement. amélioration de la super smelter&#x27;s pickaxe." style="--c:#2bb3d4">
+<header><h3>Netherite Smelter&#x27;s Pickaxe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Netherite Pickaxe · <code>/vortex give netherite_smelter_pickaxe</code></p>
+<ul><li>Cuit les minerais automatiquement.</li><li>Amélioration de la Super Smelter&#x27;s Pickaxe.</li></ul>
+<p class="ench">Efficiency 3 · Unbreaking 2 · Fortune 2 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Table de forge</summary><div class="grid">
+<div class="cell on">Modèle d&#x27;amélioration en netherite</div>
+<div class="cell on">★ Super Smelter&#x27;s Pickaxe</div>
+<div class="cell on">Lingot de netherite</div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="explosive pickaxe explosive_pickaxe outils détruit une zone 2×2 et récupère tous les drops." style="--c:#2bb3d4">
+<header><h3>Explosive Pickaxe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Diamond Pickaxe · <code>/vortex give explosive_pickaxe</code></p>
+<ul><li>Détruit une zone 2×2 et récupère tous les drops.</li></ul>
+<p class="ench">Efficiency 2 · Unbreaking 1 · Fortune 1 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Tnt</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Tnt</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Diamond Pickaxe</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Tnt</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Tnt</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="netherite explosive pickaxe netherite_explosive_pickaxe outils détruit une zone 3×3 et récupère tous les drops. amélioration de l&#x27;explosive pickaxe." style="--c:#2bb3d4">
+<header><h3>Netherite Explosive Pickaxe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Netherite Pickaxe · <code>/vortex give netherite_explosive_pickaxe</code></p>
+<ul><li>Détruit une zone 3×3 et récupère tous les drops.</li><li>Amélioration de l&#x27;Explosive Pickaxe.</li></ul>
+<p class="ench">Efficiency 3 · Unbreaking 2 · Fortune 2 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Table de forge</summary><div class="grid">
+<div class="cell on">Modèle d&#x27;amélioration en netherite</div>
+<div class="cell on">★ Explosive Pickaxe</div>
+<div class="cell on">Lingot de netherite</div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="lumberjack&#x27;s axe lumberjack_axe outils abat l&#x27;arbre entier en un coup." style="--c:#2bb3d4">
+<header><h3>Lumberjack&#x27;s Axe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Iron Axe · <code>/vortex give lumberjack_axe</code></p>
+<ul><li>Abat l&#x27;arbre entier en un coup.</li></ul>
+<p class="ench">Efficiency 1 · Unbreaking 1 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Rondin (au choix)</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Rondin (au choix)</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Iron Axe</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Rondin (au choix)</div>
+<div class="cell on">Iron Ingot</div>
+<div class="cell on">Rondin (au choix)</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="super lumberjack&#x27;s axe super_lumberjack_axe outils abat l&#x27;arbre entier en un coup. amélioration de la lumberjack&#x27;s axe." style="--c:#2bb3d4">
+<header><h3>Super Lumberjack&#x27;s Axe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Diamond Axe · <code>/vortex give super_lumberjack_axe</code></p>
+<ul><li>Abat l&#x27;arbre entier en un coup.</li><li>Amélioration de la Lumberjack&#x27;s Axe.</li></ul>
+<p class="ench">Efficiency 2 · Unbreaking 1 · Fortune 1 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Iron Block</div>
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Iron Block</div>
+<div class="cell on">★ Lumberjack&#x27;s Axe</div>
+<div class="cell on">Iron Block</div>
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Iron Block</div>
+<div class="cell on">Diamond Block</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="TOOL" data-search="netherite lumberjack&#x27;s axe netherite_lumberjack_axe outils abat l&#x27;arbre entier en un coup. amélioration de la super lumberjack&#x27;s axe." style="--c:#2bb3d4">
+<header><h3>Netherite Lumberjack&#x27;s Axe</h3><span class="badge">Outils</span></header>
+<p class="base">Base : Netherite Axe · <code>/vortex give netherite_lumberjack_axe</code></p>
+<ul><li>Abat l&#x27;arbre entier en un coup.</li><li>Amélioration de la Super Lumberjack&#x27;s Axe.</li></ul>
+<p class="ench">Efficiency 3 · Unbreaking 2 · Fortune 2 · Incassable</p>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Table de forge</summary><div class="grid">
+<div class="cell on">Modèle d&#x27;amélioration en netherite</div>
+<div class="cell on">★ Super Lumberjack&#x27;s Axe</div>
+<div class="cell on">Lingot de netherite</div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell"></div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité.</p>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_TOOL" data-search="fractured fractured outils mythiques casse instantanément tous les blocs. mine une zone cubique 3×3 et cuit les minerais." style="--c:#a259e6">
+<header><h3>Fractured</h3><span class="badge">Outils mythiques</span></header>
+<p class="base">Base : Netherite Pickaxe · <code>/vortex give fractured</code></p>
+<ul><li>Casse instantanément tous les blocs.</li><li>Mine une zone cubique 3×3 et cuit les minerais.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Pickaxe</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_TOOL" data-search="terraloop terraloop outils mythiques casse instantanément tous les blocs. zone cubique 3×3 et abattage d&#x27;arbres en un coup." style="--c:#a259e6">
+<header><h3>Terraloop</h3><span class="badge">Outils mythiques</span></header>
+<p class="base">Base : Netherite Axe · <code>/vortex give terraloop</code></p>
+<ul><li>Casse instantanément tous les blocs.</li><li>Zone cubique 3×3 et abattage d&#x27;arbres en un coup.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Axe</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_TOOL" data-search="jugas jugas outils mythiques pelle mythique : casse instantanément tous les blocs. zone cubique 3×3 et autosmelt (sable, argile...)." style="--c:#a259e6">
+<header><h3>Jugas</h3><span class="badge">Outils mythiques</span></header>
+<p class="base">Base : Netherite Shovel · <code>/vortex give jugas</code></p>
+<ul><li>Pelle mythique : casse instantanément tous les blocs.</li><li>Zone cubique 3×3 et autosmelt (sable, argile...).</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Shovel</div>
+<div class="cell on">Ancient Debris</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="blazing crossbow blazing_crossbow armes légendaires tire des flèches enflammées. sneak + clic gauche (cd 25s) : barrage — 5 flèches enflammées. passif : tous les 4 tirs, le carreau explose à l&#x27;impact." style="--c:#e8a317">
+<header><h3>Blazing Crossbow</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Crossbow · <code>/vortex give blazing_crossbow</code></p>
+<ul><li>Tire des flèches enflammées.</li><li>Sneak + clic gauche (cd 25s) : Barrage — 5 flèches enflammées.</li><li>Passif : tous les 4 tirs, le carreau explose à l&#x27;impact.</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Blaze Rod</div>
+<div class="cell on">Blaze Powder</div>
+<div class="cell on">Blaze Rod</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Crossbow</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Blaze Rod</div>
+<div class="cell on">Blaze Powder</div>
+<div class="cell on">Blaze Rod</div>
+</div>
+<p class="note">Conserve les enchantements et la durabilité de l&#x27;objet de base.</p>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="reaper scythe reaper_scythe armes légendaires sneak + clic gauche (cd 45s) : drain — prend 25% des pv de la cible, vous soigne d&#x27;autant et copie ses effets de potion. sneak + clic droit (cd 35s) : moisson d&#x27;âmes — draine les ennemis à 6 blocs." style="--c:#e8a317">
+<header><h3>Reaper Scythe</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give reaper_scythe</code></p>
+<ul><li>Sneak + clic gauche (cd 45s) : Drain — prend 25% des PV de la cible,</li><li>vous soigne d&#x27;autant et copie ses effets de potion.</li><li>Sneak + clic droit (cd 35s) : Moisson d&#x27;âmes — draine les ennemis à 6 blocs.</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Ghast Tear</div>
+<div class="cell on">Wither Skeleton Skull</div>
+<div class="cell on">Ghast Tear</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Ghast Tear</div>
+<div class="cell on">Wither Skeleton Skull</div>
+<div class="cell on">Ghast Tear</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="excalibur excalibur armes légendaires clic droit (cd 45s) : annule les 8 prochains coups reçus pendant 10s." style="--c:#e8a317">
+<header><h3>Excalibur</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give excalibur</code></p>
+<ul><li>Clic droit (cd 45s) : annule les 8 prochains coups</li><li>reçus pendant 10s.</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Enchanted Golden Apple</div>
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Enchanted Golden Apple</div>
+<div class="cell on">Diamond Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="evoker wand evoker_wand armes légendaires sneak + clic gauche (cd 12s) : 3 lignes de crocs. clic droit (cd 25s) : renvoie les projectiles à 5 blocs (8s)." style="--c:#e8a317">
+<header><h3>Evoker Wand</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give evoker_wand</code></p>
+<ul><li>Sneak + clic gauche (cd 12s) : 3 lignes de crocs.</li><li>Clic droit (cd 25s) : renvoie les projectiles à 5 blocs (8s).</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Ender Pearl</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Ender Pearl</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Ender Pearl</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Ender Pearl</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="chrono sword chrono_sword armes légendaires sneak + clic droit : marque un point dans le temps. re-sneak + clic droit (ou mort) : rembobine position et vie. cooldown 50s (100s si déclenché par la mort)." style="--c:#e8a317">
+<header><h3>Chrono Sword</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give chrono_sword</code></p>
+<ul><li>Sneak + clic droit : marque un point dans le temps.</li><li>Re-sneak + clic droit (ou mort) : rembobine position et vie.</li><li>Cooldown 50s (100s si déclenché par la mort).</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Clock</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Clock</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Clock</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Clock</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="sceptre of arachne sceptre_of_arachne armes légendaires sneak + clic gauche : empower le prochain tir. clic droit : toiles + 6 cave spiders sur l&#x27;ennemi le plus proche. les toiles se dissipent à votre approche (passage libre)." style="--c:#e8a317">
+<header><h3>Sceptre of Arachne</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give sceptre_of_arachne</code></p>
+<ul><li>Sneak + clic gauche : empower le prochain tir.</li><li>Clic droit : toiles + 6 Cave Spiders sur l&#x27;ennemi le plus proche.</li><li>Les toiles se dissipent à votre approche (passage libre).</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Cobweb</div>
+<div class="cell on">Fermented Spider Eye</div>
+<div class="cell on">Cobweb</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Cobweb</div>
+<div class="cell on">Fermented Spider Eye</div>
+<div class="cell on">Cobweb</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="LEGENDARY_WEAPON" data-search="magma club magma_club armes légendaires 35% de chance d&#x27;enflammer à l&#x27;attaque. fire resistance tant qu&#x27;elle est en main. sneak + clic gauche (cd 20s) : éruption — enflamme et projette les ennemis proches. sneak + clic droit (cd 35s) : vague de magma — ligne de feu devant vous." style="--c:#e8a317">
+<header><h3>Magma Club</h3><span class="badge">Armes légendaires</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give magma_club</code></p>
+<ul><li>35% de chance d&#x27;enflammer à l&#x27;attaque.</li><li>Fire Resistance tant qu&#x27;elle est en main.</li><li>Sneak + clic gauche (cd 20s) : Éruption — enflamme et projette les ennemis proches.</li><li>Sneak + clic droit (cd 35s) : Vague de magma — ligne de feu devant vous.</li></ul>
+<p class="warn">Craft limité : 3 exemplaires sur le serveur · 2 armes légendaires maximum par joueur.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Magma Block</div>
+<div class="cell on">Blaze Rod</div>
+<div class="cell on">Magma Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Magma Block</div>
+<div class="cell on">Blaze Rod</div>
+<div class="cell on">Magma Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="sealord sealord armes et armures mythiques passif : puissant dans l&#x27;eau (effets ci-dessous). sneak + clic gauche (cd 20s) : tidal slam sneak + clic droit (cd 60s) : maelstrom" style="--c:#e5484d">
+<header><h3>Sealord</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Trident · <code>/vortex give sealord</code></p>
+<ul><li>Passif : puissant dans l&#x27;eau (effets ci-dessous).</li><li>Sneak + clic gauche (cd 20s) : Tidal Slam</li><li>Sneak + clic droit (cd 60s) : Maelstrom</li></ul>
+<p class="ench">Riptide 3 · Sharpness 6 · Breach 2 · Sweeping Edge 5 · Fire Aspect 3 · Looting 5 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Conduit</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Heart Of The Sea</div>
+<div class="cell on">Trident</div>
+<div class="cell on">Heart Of The Sea</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Conduit</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="lightspeed lightspeed armes et armures mythiques passif : immunité aux dégâts de chute. clic droit (cd 8s) : dash sneak + clic droit (cd 45s) : sonic slash" style="--c:#e5484d">
+<header><h3>Lightspeed</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Sword · <code>/vortex give lightspeed</code></p>
+<ul><li>Passif : immunité aux dégâts de chute.</li><li>Clic droit (cd 8s) : Dash</li><li>Sneak + clic droit (cd 45s) : Sonic Slash</li></ul>
+<p class="ench">Sharpness 6 · Breach 2 · Sweeping Edge 5 · Fire Aspect 3 · Looting 5 · Efficiency 10 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Netherite Sword</div>
+<div class="cell on">Elytra</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="mintus mintus armes et armures mythiques passif : régénère près des villageois. sneak + clic gauche (cd 30s) : rallying cheer sneak + clic droit (cd 60s) : village&#x27;s wrath" style="--c:#e5484d">
+<header><h3>Mintus</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Axe · <code>/vortex give mintus</code></p>
+<ul><li>Passif : régénère près des villageois.</li><li>Sneak + clic gauche (cd 30s) : Rallying Cheer</li><li>Sneak + clic droit (cd 60s) : Village&#x27;s Wrath</li></ul>
+<p class="ench">Sharpness 6 · Breach 2 · Fire Aspect 2 · Fortune 5 · Looting 5 · Efficiency 10 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Emerald Block</div>
+<div class="cell on">Enchanted Golden Apple</div>
+<div class="cell on">Emerald Block</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Netherite Axe</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Totem Of Undying</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="skyfall skyfall armes et armures mythiques passif : flèches pleine puissance perforantes (3 cibles) et plus rapides. sneak + clic gauche (cd 40s) : arrow rain — pluie de flèches sur la cible visée." style="--c:#e5484d">
+<header><h3>Skyfall</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Bow · <code>/vortex give skyfall</code></p>
+<ul><li>Passif : flèches pleine puissance perforantes (3 cibles) et plus rapides.</li><li>Sneak + clic gauche (cd 40s) : Arrow Rain — pluie de flèches sur la cible visée.</li></ul>
+<p class="ench">Power 8 · Punch 3 · Flame 1 · Infinity 1 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Breeze Rod</div>
+<div class="cell on">Bow</div>
+<div class="cell on">Breeze Rod</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Ingot</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="voidrender voidrender armes et armures mythiques passif : chargement quasi instantané, carreaux perforants. sneak + clic gauche (cd 30s) : rail shot — rayon perforant qui brise les boucliers. sneak + tir (cd 20s) : blink bolt — vous vous téléportez à l&#x27;impact." style="--c:#e5484d">
+<header><h3>Voidrender</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Crossbow · <code>/vortex give voidrender</code></p>
+<ul><li>Passif : chargement quasi instantané, carreaux perforants.</li><li>Sneak + clic gauche (cd 30s) : Rail Shot — rayon perforant qui brise les boucliers.</li><li>Sneak + tir (cd 20s) : Blink Bolt — vous vous téléportez à l&#x27;impact.</li></ul>
+<p class="ench">Quick Charge 5 · Piercing 5 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Crossbow</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Ingot</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="colossus plate colossus_plate armes et armures mythiques passif : renvoie 20% des dégâts de mêlée à l&#x27;attaquant. double sneak (cd 60s) : fortress — résistance iv, sans recul et onde de choc." style="--c:#e5484d">
+<header><h3>Colossus Plate</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Chestplate · <code>/vortex give colossus_plate</code></p>
+<ul><li>Passif : renvoie 20% des dégâts de mêlée à l&#x27;attaquant.</li><li>Double sneak (cd 60s) : Fortress — Résistance IV, sans recul et onde de choc.</li></ul>
+<p class="ench">Protection 6 · Projectile Protection 6 · Thorns 3 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Netherite Chestplate</div>
+<div class="cell on">Totem Of Undying</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="phantom treads phantom_treads armes et armures mythiques passif : aucun dégât de chute. double sneak (cd 25s) : shadow step — dash en avant et invisibilité 3s." style="--c:#e5484d">
+<header><h3>Phantom Treads</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Boots · <code>/vortex give phantom_treads</code></p>
+<ul><li>Passif : aucun dégât de chute.</li><li>Double sneak (cd 25s) : Shadow Step — dash en avant et invisibilité 3s.</li></ul>
+<p class="ench">Protection 6 · Feather Falling 8 · Depth Strider 4 · Soul Speed 5 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Netherite Boots</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="radiant crown radiant_crown armes et armures mythiques passif : immunisé à la cécité, l&#x27;obscurité et la nausée. double sneak (cd 45s) : solar flare — aveugle et révèle les ennemis, vous soigne." style="--c:#e5484d">
+<header><h3>Radiant Crown</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Helmet · <code>/vortex give radiant_crown</code></p>
+<ul><li>Passif : immunisé à la cécité, l&#x27;obscurité et la nausée.</li><li>Double sneak (cd 45s) : Solar Flare — aveugle et révèle les ennemis, vous soigne.</li></ul>
+<p class="ench">Protection 6 · Respiration 5 · Aqua Affinity 1 · Projectile Protection 6 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Heart Of The Sea</div>
+<div class="cell on">Netherite Helmet</div>
+<div class="cell on">Heart Of The Sea</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="ember greaves ember_greaves armes et armures mythiques passif : immunisé au feu, les ennemis qui vous frappent prennent feu. double sneak (cd 40s) : flame nova — enflamme et repousse les ennemis proches." style="--c:#e5484d">
+<header><h3>Ember Greaves</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Leggings · <code>/vortex give ember_greaves</code></p>
+<ul><li>Passif : immunisé au feu, les ennemis qui vous frappent prennent feu.</li><li>Double sneak (cd 40s) : Flame Nova — enflamme et repousse les ennemis proches.</li></ul>
+<p class="ench">Protection 6 · Fire Protection 10 · Swift Sneak 5 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Magma Block</div>
+<div class="cell on">Netherite Leggings</div>
+<div class="cell on">Magma Block</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Nether Star</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="MYTHIC_WEAPON" data-search="stormpiercer stormpiercer armes et armures mythiques passif : brise les boucliers ; tous les 4 coups, la foudre jaillit en chaîne. sneak + clic droit (cd 14s) : thunder javelin — javelot de foudre perforant qui traverse tous les ennemis. touche d&#x27;échange de main (cd 18s) : skewer dash — charge fulgurante qui empale et projette tout sur votre passage." style="--c:#e5484d">
+<header><h3>Stormpiercer</h3><span class="badge">Armes et armures mythiques</span></header>
+<p class="base">Base : Netherite Spear · <code>/vortex give stormpiercer</code></p>
+<ul><li>Passif : brise les boucliers ; tous les 4 coups, la foudre jaillit en chaîne.</li><li>Sneak + clic droit (cd 14s) : Thunder Javelin — javelot de foudre perforant qui traverse tous les ennemis.</li><li>Touche d&#x27;échange de main (cd 18s) : Skewer Dash — charge fulgurante qui empale et projette tout sur votre passage.</li></ul>
+<p class="ench">Sharpness 6 · Fire Aspect 2 · Looting 5 · Lunge 3 · Breach 2 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Lightning Rod</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Breeze Rod</div>
+<div class="cell on">Netherite Spear</div>
+<div class="cell on">Breeze Rod</div>
+<div class="cell on">Netherite Block</div>
+<div class="cell on">Heavy Core</div>
+<div class="cell on">Netherite Block</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="SECRET_WEAPON" data-search="umbral scythe umbral_scythe secret weapons brise les boucliers comme une hache. passif : aucun dégât de chute, smash attacks de mace. sneak + clic droit (cd 16s) : eclipse leap — bond immense : éclipse les ennemis au départ, écrase le sol à l&#x27;atterrissage. sneak + clic gauche (3 charges, cd 20s) : reaper chains — 3 charges libres : blessent l&#x27;ennemi accroché, onde de choc au sol. touche d&#x27;échange de main (cd 25s) : shatterer — onde de choc dévastatrice : dégâts, projection en l&#x27;air et paralysie." style="--c:#a855f7">
+<header><h3>Umbral Scythe</h3><span class="badge">Secret Weapons</span></header>
+<p class="base">Base : Mace · <code>/vortex give umbral_scythe</code></p>
+<ul><li>Brise les boucliers comme une hache.</li><li>Passif : aucun dégât de chute, smash attacks de mace.</li><li>Sneak + clic droit (cd 16s) : Eclipse Leap — bond immense : éclipse les ennemis au départ, écrase le sol à l&#x27;atterrissage.</li><li>Sneak + clic gauche (3 charges, cd 20s) : Reaper Chains — 3 charges libres : blessent l&#x27;ennemi accroché, onde de choc au sol.</li><li>Touche d&#x27;échange de main (cd 25s) : Shatterer — onde de choc dévastatrice : dégâts, projection en l&#x27;air et paralysie.</li></ul>
+<p class="ench">Density 5 · Breach 4 · Wind Burst 1 · Fire Aspect 2 · Looting 5 · Incassable</p>
+<p class="warn">Craft limité : un seul exemplaire sur le serveur · une arme et une armure mythiques par joueur · impossible à ranger.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell"></div>
+<div class="cell"></div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell"></div>
+<div class="cell on">Heavy Core</div>
+<div class="cell on">Netherite Ingot</div>
+<div class="cell on">Breeze Rod</div>
+<div class="cell"></div>
+<div class="cell on">Netherite Ingot</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="CONSUMABLE" data-search="panacea panacea consommables soigne 3,5 cœurs par utilisation (5 charges). clic droit sur une ruche avec du miel : +1 charge." style="--c:#e255a1">
+<header><h3>Panacea</h3><span class="badge">Consommables</span></header>
+<p class="base">Base : Potion · <code>/vortex give panacea</code></p>
+<ul><li>Soigne 3,5 cœurs par utilisation (5 charges).</li><li>Clic droit sur une ruche avec du miel : +1 charge.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Glowstone</div>
+<div class="cell on">Honey Bottle</div>
+<div class="cell on">Glowstone</div>
+<div class="cell on">Golden Apple</div>
+<div class="cell on">Glass Bottle</div>
+<div class="cell on">Golden Apple</div>
+<div class="cell on">Glowstone</div>
+<div class="cell on">Honey Bottle</div>
+<div class="cell on">Glowstone</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="CONSUMABLE" data-search="crystallization shard crystallization_shard consommables clic droit : immobile, invulnérable et sans recul pendant 8s." style="--c:#e255a1">
+<header><h3>Crystallization Shard</h3><span class="badge">Consommables</span></header>
+<p class="base">Base : Amethyst Shard · <code>/vortex give crystallization_shard</code></p>
+<ul><li>Clic droit : immobile, invulnérable et sans recul</li><li>pendant 8s.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Amethyst Shard</div>
+<div class="cell on">Diamond</div>
+<div class="cell on">Amethyst Shard</div>
+<div class="cell on">Amethyst Shard</div>
+<div class="cell on">Amethyst Block</div>
+<div class="cell on">Amethyst Shard</div>
+<div class="cell on">Amethyst Shard</div>
+<div class="cell on">Echo Shard</div>
+<div class="cell on">Amethyst Shard</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="CONSUMABLE" data-search="agony agony consommables à l&#x27;impact : dégâts instantanés ii et faiblesse 60s sur les entités touchées." style="--c:#e255a1">
+<header><h3>Agony</h3><span class="badge">Consommables</span></header>
+<p class="base">Base : Splash Potion · <code>/vortex give agony</code></p>
+<ul><li>À l&#x27;impact : Dégâts instantanés II</li><li>et Faiblesse 60s sur les entités touchées.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Fermented Spider Eye</div>
+<div class="cell on">Wither Rose</div>
+<div class="cell on">Fermented Spider Eye</div>
+<div class="cell on">Pufferfish</div>
+<div class="cell on">Splash Potion</div>
+<div class="cell on">Pufferfish</div>
+<div class="cell on">Fermented Spider Eye</div>
+<div class="cell on">Wither Rose</div>
+<div class="cell on">Fermented Spider Eye</div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="CONSUMABLE" data-search="all in one all_in_one consommables potion jetable : force i, vitesse i et résistance au feu i pendant 8 min." style="--c:#e255a1">
+<header><h3>All in One</h3><span class="badge">Consommables</span></header>
+<p class="base">Base : Splash Potion · <code>/vortex give all_in_one</code></p>
+<ul><li>Potion jetable : Force I, Vitesse I et Résistance au feu I pendant 8 min.</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Blaze Powder</div>
+<div class="cell on">Sugar</div>
+<div class="cell on">Magma Cream</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell"></div>
+<div class="cell on">Glass Bottle</div>
+<div class="cell"></div>
+</div>
+</details>
+</article>
+<article class="card" data-cat="CONSUMABLE" data-search="holy master holy_master consommables potion jetable : soin instantané ii, puis résistance v et lenteur v pendant 30 s (maître tortue)." style="--c:#e255a1">
+<header><h3>Holy Master</h3><span class="badge">Consommables</span></header>
+<p class="base">Base : Splash Potion · <code>/vortex give holy_master</code></p>
+<ul><li>Potion jetable : Soin instantané II, puis Résistance V et Lenteur V pendant 30 s (Maître tortue).</li></ul>
+<p class="note">Craft illimité.</p>
+<details><summary>Recette — Forme fixe</summary><div class="grid">
+<div class="cell on">Glistering Melon Slice</div>
+<div class="cell on">Turtle Scute</div>
+<div class="cell on">Glistering Melon Slice</div>
+<div class="cell on">Ghast Tear</div>
+<div class="cell on">Diamond Block</div>
+<div class="cell on">Ghast Tear</div>
+<div class="cell on">Gunpowder</div>
+<div class="cell on">Glass Bottle</div>
+<div class="cell on">Gunpowder</div>
+</div>
+</details>
+</article>
+</div><p class="empty" id="empty">Aucun résultat.</p></section>
+<section id="mythic"><h2>Règles des armes mythiques</h2><ul>
+<li>Chaque arme mythique, armure mythique et Secret Weapon ne peut être forgée <b>qu'une seule fois par serveur</b>, définitivement.</li>
+<li>Un joueur ne peut porter <b>qu'une seule arme mythique et qu'une seule armure mythique</b> à la fois.</li>
+<li>Elles ne se rangent dans <b>aucun conteneur</b> (coffre, ender chest, baril, shulker, entonnoir, bundle…).</li>
+<li>Capacité : sneak + clic gauche (Lightspeed : clic droit). Ultime : sneak + clic droit.</li>
+<li>Leurs effets permanents restent actifs tant qu'elles sont dans l'inventaire.</li></ul></section>
+<section id="legendaires"><h2>Armes légendaires</h2><ul>
+<li>Chaque arme légendaire ne peut être <b>craftée que 3 fois sur tout le serveur</b>, et <b>2 armes légendaires maximum par joueur</b>.</li>
+<li>Toutes les armes légendaires et mythiques sont <b>incassables</b>, et leurs enchantements ne sont pas limités.</li>
+<li>Leurs recettes demandent des ressources rares (étoile du Nether, lingots et blocs de netherite, totems…) : regardez la recette de chaque arme dans la liste d’items.</li></ul></section>
+<section id="plugins"><h2>Plugins du serveur</h2><p class="sub">Ce que fait chaque plugin et comment l’utiliser.</p><div class="pls">
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 8a16 16 0 0 1 16 16M24 16a8 8 0 0 1 8 8M24 24l-8 0"/></svg></div><div><h3>VortexEssentials <small>Items custom, armes, boutique, commandes, primes, spawners</small></h3><ol><li>Ouvrez le menu avec /vortex : catégories d&#x27;items (outils, armes légendaires, mythiques, secrètes), fonctionnalités, boosts de grade, profil, avec la recette de chaque item (clic gauche). Chaque item indique si son craft est illimité ou à quantité limitée.</li><li>Sneak + clic droit avec un outil Vortex : réglages (zone, autosmelt, abattage d&#x27;arbres, Toucher de soie, vitesse de minage vanilla).</li><li>Armes légendaires : 3 exemplaires maximum par arme sur le serveur et 2 par joueur. Armes et armures mythiques (et Secret Weapons) : un seul exemplaire par serveur, forgé avec un rituel.</li><li>Le SMP démarre avec /smp start : les armes légendaires et mythiques se craftent 2 jours plus tard. La mace vanilla est limitée (quantité par serveur et par joueur).</li><li>Boutique (/shop, /sell) : plus votre fortune est grande, plus les prix d&#x27;achat montent ; les items faciles à fabriquer se revendent très peu. Vos grades donnent bonus de vente et réductions d&#x27;achat.</li><li>Commandes (/orders) : demandez des items en payant d&#x27;avance, ou livrez les commandes des autres joueurs et celles du serveur pour gagner de l&#x27;argent.</li><li>Primes (/bounty &lt;joueur&gt; &lt;montant&gt;) : mettez une prime sur la tête d&#x27;un joueur ; celui qui le tue l&#x27;encaisse.</li><li>Spawners empilables (/us shop) : mobs réels, auto-farm, stockage des drops et de l&#x27;XP, améliorations, joueurs autorisés, vente automatique.</li><li>Crafts à rituel (/vortex rituals) : craftez puis attendez un court moment : l&#x27;item apparaît par terre à la fin du rituel.</li><li>Les cooldowns de l&#x27;arme en main s&#x27;affichent à l&#x27;écran (/vortex hud pour les masquer).</li></ol><p class="cmds"><code>/vortex</code> <code>/vortex list</code> <code>/vortex preview &lt;item&gt;</code> <code>/vortex boost</code> <code>/vortex rituals</code> <code>/shop</code> <code>/sell</code> <code>/orders</code> <code>/bounty &lt;joueur&gt; &lt;montant&gt;</code> <code>/us shop</code> <code>/playtime</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="22" width="24" height="18" rx="3"/><path d="M17 22v-6a7 7 0 0 1 14 0v6"/></svg></div><div><h3>AuthMe <small>Connexion sécurisée</small></h3><ol><li>Comptes premium et crack acceptés.</li><li>Première connexion : créez votre mot de passe avec /register.</li><li>Les fois suivantes : connectez-vous avec /login.</li></ol><p class="cmds"><code>/register &lt;mot de passe&gt; &lt;mot de passe&gt;</code> <code>/login &lt;mot de passe&gt;</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="15" width="34" height="23" rx="2"/><path d="M7 24h34M24 24v7"/><path d="M7 15l4-6h26l4 6"/></svg></div><div><h3>ExcellentCrates <small>Caisses et clés</small></h3><ol><li>Chaque caisse s&#x27;ouvre avec une clé. Vos clés sont enregistrées sur votre compte.</li><li>Prévisualisez le contenu d&#x27;une caisse avant de l&#x27;ouvrir ; la récompense est tirée au sort.</li><li>Certaines caisses ont un délai entre deux ouvertures.</li></ol><p class="cmds"><code>/crates preview &lt;caisse&gt;</code> <code>/crates open &lt;caisse&gt;</code> <code>/crates key inspect</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9l22 22M39 9 17 31M9 39l7-7M39 39l-7-7"/><path d="M9 9h7M39 9h-7"/></svg></div><div><h3>EternalCombat <small>Anti combat-log</small></h3><ol><li>Dès que vous frappez ou êtes frappé, vous entrez en combat pendant quelques secondes.</li><li>Pendant le combat, se déconnecter est sanctionné et certaines actions peuvent être bloquées (élytres, inventaire, commandes, pose de blocs selon la configuration).</li></ol><p class="cmds"><code>/combatlog status &lt;joueur&gt;</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="7" width="12" height="21" rx="6"/><path d="M12 23a12 12 0 0 0 24 0M24 35v7M18 42h12"/></svg></div><div><h3>Simple Voice Chat <small>Chat vocal de proximité</small></h3><ol><li>Installez le mod Simple Voice Chat sur votre client (Fabric, Forge, NeoForge ou Quilt), dans la même version que le serveur.</li><li>En jeu, appuyez sur V pour ouvrir le menu : micro, volume, groupes.</li><li>Vous entendez les joueurs proches de vous. Un groupe permet de parler à distance : /voicechat invite &lt;joueur&gt;.</li><li>Sans le mod, vous jouez normalement mais sans voix.</li></ol><p class="cmds"><code>V (menu)</code> <code>/voicechat invite &lt;joueur&gt;</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="15" r="7"/><path d="M9 41c2-10 8-14 15-14s13 4 15 14"/></svg></div><div><h3>SkinsRestorer <small>Skins</small></h3><ol><li>Changez de skin avec /skin set &lt;nom du skin&gt;, ou revenez au vôtre avec /skin clear.</li></ol><p class="cmds"><code>/skin set &lt;nom&gt;</code> <code>/skin clear</code></p></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 15h32c0 5-4 8-9 8H17c0 6 4 6 4 11H13c0-5 4-5 4-11-4 0-9-3-9-8z"/><path d="M13 40h22"/></svg></div><div><h3>BoundlessForging <small>Enclume sans « Trop cher ! »</small></h3><ol><li>Plus de blocage « Too Expensive » : le coût maximum est ramené à 39 niveaux, et l&#x27;opération reste possible.</li><li>Rien à faire de plus : utilisez l&#x27;enclume normalement.</li></ol></div></article>
+<article class="pl"><div class="ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 40V20a11 11 0 0 1 22 0v20z"/><path d="M24 17v12M19 22h10"/><path d="M8 40h32"/></svg></div><div><h3>AxGraves <small>Tombes à la mort</small></h3><ol><li>À votre mort, vos objets et votre XP sont rangés dans une tombe, à l&#x27;endroit où vous êtes mort.</li><li>Retournez sur place pour les récupérer. La tombe est protégée pendant un temps, puis elle expire.</li></ol></div></article>
+</div></section>
+<section id="tousplugins"><h2>Tous les plugins de VortexSMP</h2><p class="sub">La liste complète des plugins installés sur le serveur.</p><h3>Plugins Paper (7)</h3><div class="tw"><table><thead><tr><th>Plugin</th><th>À quoi ça sert</th></tr></thead><tbody>
+<tr><td><b>BoundlessForging</b></td><td>Forge : enclumes et améliorations d&#x27;équipement</td></tr>
+<tr><td><b>CommandAPI</b></td><td>Bibliothèque de commandes (dépendance technique)</td></tr>
+<tr><td><b>EternalCombat</b></td><td>Combat : étiquette de combat (déconnexion et fuite pénalisées)</td></tr>
+<tr><td><b>FancyNpcs</b></td><td>PNJ du serveur</td></tr>
+<tr><td><b>MiniMOTD</b></td><td>Message du serveur dans la liste multijoueur</td></tr>
+<tr><td><b>nightcore</b></td><td>Bibliothèque des plugins NightExpress (ExcellentCrates, SunLight)</td></tr>
+<tr><td><b>PlugManX</b></td><td>Gestion des plugins à chaud (staff)</td></tr>
+</tbody></table></div>
+<h3>Plugins Bukkit (49)</h3><div class="tw"><table><thead><tr><th>Plugin</th><th>À quoi ça sert</th></tr></thead><tbody>
+<tr><td><b>AuthMe</b></td><td>Connexion : /register et /login (comptes premium et crack)</td></tr>
+<tr><td><b>AxGraves</b></td><td>Tombes : récupérez vos items à votre mort</td></tr>
+<tr><td><b>BetterTeamGUI</b></td><td>Menu graphique pour les équipes</td></tr>
+<tr><td><b>BetterTeams</b></td><td>Équipes de joueurs</td></tr>
+<tr><td><b>BlissDragonEgg</b></td><td>Œuf de dragon spécial (gammes Bliss)</td></tr>
+<tr><td><b>BlissGems</b></td><td>Gemmes avec pouvoirs (gammes Bliss)</td></tr>
+<tr><td><b>BlissGemsExpansion</b></td><td>Extension de BlissGems</td></tr>
+<tr><td><b>BlissMythics</b></td><td>Objets mythiques (gammes Bliss)</td></tr>
+<tr><td><b>CartNerfer</b></td><td>Limite les performances des minecarts</td></tr>
+<tr><td><b>Chunky</b></td><td>Préchargement des chunks du monde</td></tr>
+<tr><td><b>ChunkyBorder</b></td><td>Bordure du monde pour Chunky</td></tr>
+<tr><td><b>ClickVillagers</b></td><td>Interaction rapide avec les villageois</td></tr>
+<tr><td><b>CoreProtect</b></td><td>Journal des actions et restauration (staff)</td></tr>
+<tr><td><b>DecentHolograms</b></td><td>Hologrammes du serveur</td></tr>
+<tr><td><b>EasyStringTripwire</b></td><td>Ficelle et tripwire</td></tr>
+<tr><td><b>EasyVillagerRoll</b></td><td>Relance des échanges des villageois</td></tr>
+<tr><td><b>ExcellentCrates</b></td><td>Caisses et clés</td></tr>
+<tr><td><b>FasterHoppers</b></td><td>Optimisation des entonnoirs</td></tr>
+<tr><td><b>GrimAC</b></td><td>Anti-triche</td></tr>
+<tr><td><b>HappyGhast</b></td><td>Réglages du Happy Ghast</td></tr>
+<tr><td><b>InstantBrew</b></td><td>Brassage de potions</td></tr>
+<tr><td><b>InventoryRollbackPlus</b></td><td>Restauration d&#x27;inventaires (staff)</td></tr>
+<tr><td><b>InvisHider</b></td><td>Masque l&#x27;équipement des joueurs invisibles</td></tr>
+<tr><td><b>InvSeePlusPlus</b></td><td>Voir et modifier l&#x27;inventaire d&#x27;un joueur (staff)</td></tr>
+<tr><td><b>LifeSteal</b></td><td>Cœurs gagnés et perdus avec les kills</td></tr>
+<tr><td><b>LightBans</b></td><td>Sanctions : bans, mutes, kicks</td></tr>
+<tr><td><b>LuckPerms</b></td><td>Permissions et grades</td></tr>
+<tr><td><b>MinerTrack</b></td><td>Suivi du minage (détection de x-ray, staff)</td></tr>
+<tr><td><b>Orebfuscator</b></td><td>Anti-xray : masque les minerais cachés</td></tr>
+<tr><td><b>packetevents</b></td><td>Bibliothèque de paquets (dépendance technique)</td></tr>
+<tr><td><b>PlaceholderAPI</b></td><td>Variables pour les autres plugins</td></tr>
+<tr><td><b>ProtocolLib</b></td><td>Bibliothèque de paquets (dépendance technique)</td></tr>
+<tr><td><b>Rituals</b></td><td>Rituels</td></tr>
+<tr><td><b>SCore</b></td><td>Objets et effets personnalisés</td></tr>
+<tr><td><b>ShopkeeperProtection</b></td><td>Protège les coffres des boutiques de joueurs</td></tr>
+<tr><td><b>Shopkeepers</b></td><td>Boutiques de joueurs avec PNJ marchands</td></tr>
+<tr><td><b>ShopkeepersAddon</b></td><td>Extension de Shopkeepers</td></tr>
+<tr><td><b>SkinsRestorer</b></td><td>Skins pour les comptes crack</td></tr>
+<tr><td><b>SMPCore</b></td><td>Fonctions du SMP</td></tr>
+<tr><td><b>SunLight</b></td><td>Utilitaires (NightExpress)</td></tr>
+<tr><td><b>Tebex</b></td><td>Boutique en ligne du serveur</td></tr>
+<tr><td><b>Vault</b></td><td>Lien entre l&#x27;économie et les plugins</td></tr>
+<tr><td><b>ViaBackwards</b></td><td>Connexion avec des versions plus anciennes</td></tr>
+<tr><td><b>ViaVersion</b></td><td>Connexion avec des versions plus récentes</td></tr>
+<tr><td><b>voicechat</b></td><td>Simple Voice Chat : discussion vocale de proximité</td></tr>
+<tr><td><b>VortexEssentials</b></td><td>Items custom, armes, boutique, commandes, primes, spawners, rituels</td></tr>
+<tr><td><b>Votifier</b></td><td>Réception des votes</td></tr>
+<tr><td><b>WorldEdit</b></td><td>Édition de terrain (staff)</td></tr>
+<tr><td><b>WorldGuard</b></td><td>Protection de zones</td></tr>
+</tbody></table></div></section>
+<section id="shop"><h2>Boutique</h2>
+<p class="sub">Commande <code>/shop</code> : boutique du serveur (stock illimité, prix fixes) et boutique des joueurs.</p>
+<div class="tw"><table><tr><th>Catégorie</th><th>Items</th></tr>
+<tr><td><b>Blocs</b></td><td>237</td></tr><tr><td><b>Bois</b></td><td>213</td></tr><tr><td><b>Couleurs &amp; textiles</b></td><td>96</td></tr><tr><td><b>Nature &amp; plantes</b></td><td>127</td></tr><tr><td><b>Minerais &amp; cuivre</b></td><td>121</td></tr><tr><td><b>Nourriture</b></td><td>22</td></tr><tr><td><b>Agriculture</b></td><td>30</td></tr><tr><td><b>Drops de mobs</b></td><td>31</td></tr><tr><td><b>Outils &amp; armes</b></td><td>28</td></tr><tr><td><b>Armures</b></td><td>18</td></tr><tr><td><b>Redstone &amp; transport</b></td><td>34</td></tr><tr><td><b>Décoration</b></td><td>50</td></tr><tr><td><b>Alchimie &amp; XP</b></td><td>12</td></tr><tr><td><b>Musique</b></td><td>24</td></tr><tr><td><b>Modèles &amp; poteries</b></td><td>51</td></tr><tr><td><b>Divers</b></td><td>31</td></tr></table></div>
+<ul><li><b>Vendre</b> : <code>/shop sellhand</code> (item en main), <code>/shop sellall</code> (tout l'inventaire hors barre rapide) ou clic droit dans le menu.</li>
+<li><b>Boutique des joueurs</b> : <code>/shop sell &lt;prix&gt;</code> met en vente l'item tenu ; une taxe est prélevée sur le vendeur.</li>
+<li><b>Menu de vente</b> : <code>/sell</code> ouvre un menu où vous déposez les items à vendre ; ils sont vendus quand vous le fermez.</li>
+<li><b>Non vendus</b> : les items qu’on obtient auprès des villageois (glowstone, lapis, laines…), les élytres, le netherite façonné (armures, outils, armes, modèle d’amélioration), la mace, le trident, la ficelle, les shulker boxes et l’ender chest ne sont pas dans la boutique.</li>
+<li><b>Non rachetés</b> : les items qui servent au PvP (armes, armures, pommes d’or, totems, seaux, rails, minecarts…) ne rapportent pas d’argent à la vente.</li>
+<li><b>Grades</b> : chaque grade peut donner un bonus sur les prix de vente et une réduction sur les prix d'achat (tableau ci-dessous).</li></ul></section>
+<section id="grades"><h2>Grades &amp; boosts</h2><div class="tw"><table>
+<tr><th>Grade</th><th>XP</th><th>Drops mobs</th><th>Dégâts</th><th>Durée potions</th><th>Cooldowns</th><th>Vente</th><th>Achat</th><th>Effets</th></tr>
+<tr><td><b>vip</b></td><td>×1.6</td><td>×1.4</td><td>×1.1</td><td>×1.4</td><td>−25%</td><td>+30%</td><td>−10%</td><td>Luck 4</td></tr><tr><td><b>mvp</b></td><td>×1.75</td><td>×1.5</td><td>×1.15</td><td>×1.5</td><td>−30%</td><td>+35%</td><td>−15%</td><td>Luck 5</td></tr><tr><td><b>donateur</b></td><td>×1.45</td><td>×1.3</td><td>×1.05</td><td>×1.3</td><td>−20%</td><td>+25%</td><td>−5%</td><td>Luck 3</td></tr><tr><td><b>media</b></td><td>×1.3</td><td>×1.15</td><td>×1.0</td><td>×1.2</td><td>−15%</td><td>+15%</td><td>−5%</td><td>Luck 2</td></tr><tr><td><b>veteran</b></td><td>×1.15</td><td>×1.1</td><td>×1.0</td><td>×1.1</td><td>−10%</td><td>+10%</td><td>−0%</td><td>Luck 1</td></tr><tr><td><b>staff</b></td><td>×1.5</td><td>×1.75</td><td>×1.0</td><td>×1.35</td><td>−15%</td><td>+25%</td><td>−25%</td><td>Haste 2, Luck 2</td></tr></table></div></section>
+<section id="commandes"><h2>Commandes</h2><div class="tw"><table>
+<tr><th>Commande</th><th>Rôle</th></tr>
+<tr><td><code>/vortex</code></td><td>Ouvre le menu des items et des recettes</td></tr>
+<tr><td><code>/vortex list</code></td><td>Liste les items</td></tr>
+<tr><td><code>/vortex preview &lt;item&gt;</code></td><td>Affiche la recette d'un item</td></tr>
+<tr><td><code>/vortex boost</code></td><td>Affiche vos boosts de grade</td></tr>
+<tr><td><code>/shop</code></td><td>Ouvre la boutique (serveur et joueurs)</td></tr>
+<tr><td><code>/shop sellhand</code> · <code>/shop sellall</code></td><td>Vend l'item en main · tout ce qui est vendable</td></tr>
+<tr><td><code>/sell</code></td><td>Menu de vente : déposez des items, ils sont vendus à la fermeture</td></tr>
+<tr><td><code>/orders</code> · <code>/orders create &lt;quantité&gt; &lt;prix&gt;</code></td><td>Commandes : livrer des items pour gagner de l'argent · demander des items</td></tr>
+<tr><td><code>/bounty &lt;joueur&gt; &lt;montant&gt;</code> · <code>/bounty</code></td><td>Met une prime sur un joueur · liste des primes</td></tr>
+<tr><td><code>/us shop</code> · <code>/us trust &lt;joueur&gt;</code></td><td>Boutique de spawners · autorise un joueur sur le spawner visé</td></tr>
+<tr><td><code>/vortex rituals</code></td><td>Liste des crafts à rituel et de leurs recettes</td></tr>
+<tr><td><code>/playtime</code> · <code>/playtime top</code></td><td>Votre temps de jeu · classement</td></tr>
+<tr><td><code>/shop sell &lt;prix&gt;</code></td><td>Met l'item tenu en vente aux joueurs</td></tr></table></div></section>
+
+<footer>Page générée depuis le plugin VortexEssentials (par ItsVany).</footer>
+</div>
+<script>
+const cards=[...document.querySelectorAll('.card')],q=document.getElementById('q'),empty=document.getElementById('empty');
+let cat='ALL';
+function apply(){const t=q.value.trim().toLowerCase();let n=0;
+cards.forEach(c=>{const ok=(cat==='ALL'||c.dataset.cat===cat)&&(!t||c.dataset.search.includes(t)||c.textContent.toLowerCase().includes(t));c.style.display=ok?'':'none';if(ok)n++});
+empty.style.display=n?'none':'block'}
+q.addEventListener('input',apply);
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');cat=b.dataset.cat;apply()}));
+</script></body></html>

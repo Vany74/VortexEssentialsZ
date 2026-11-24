@@ -1,0 +1,345 @@
+# Plugins présentés dans le wiki (partie "joueurs"). Éditez librement puis relancez generate_wiki.py.
+#
+# verify: true  => description/commandes NON confirmées : la fiche est masquée tant que
+#                  SHOW_UNVERIFIED = False dans generate_wiki.py. Complétez-la, puis retirez "verify".
+# icon : lock, home, shop, crate, grave, combat, mic, skin, anvil, vortex, generic
+#
+# Les plugins d'administration (protection, sauvegarde, permissions...) ne sont volontairement
+# pas listés : inutile de donner la liste exacte de vos plugins de sécurité aux joueurs.
+
+plugins:
+- name: VortexEssentials
+  icon: vortex
+  role: Items custom, armes, boutique, commandes, primes, spawners
+  how:
+  - 'Ouvrez le menu avec /vortex : catégories d''items (outils, armes légendaires, mythiques, secrètes), fonctionnalités, boosts de grade, profil,
+    avec la recette de chaque item (clic gauche). Chaque item indique si son craft est illimité ou à quantité limitée.'
+  - 'Sneak + clic droit avec un outil Vortex : réglages (zone, autosmelt, abattage d''arbres, Toucher de soie, vitesse de minage vanilla).'
+  - 'Armes légendaires : 3 exemplaires maximum par arme sur le serveur et 2 par joueur. Armes et armures mythiques (et Secret Weapons) : un seul
+    exemplaire par serveur, forgé avec un rituel.'
+  - 'Le SMP démarre avec /smp start : les armes légendaires et mythiques se craftent 2 jours plus tard. La mace vanilla est limitée (quantité
+    par serveur et par joueur).'
+  - 'Boutique (/shop, /sell) : plus votre fortune est grande, plus les prix d''achat montent ; les items faciles à fabriquer se revendent très
+    peu. Vos grades donnent bonus de vente et réductions d''achat.'
+  - 'Commandes (/orders) : demandez des items en payant d''avance, ou livrez les commandes des autres joueurs et celles du serveur pour gagner
+    de l''argent.'
+  - 'Primes (/bounty <joueur> <montant>) : mettez une prime sur la tête d''un joueur ; celui qui le tue l''encaisse.'
+  - 'Spawners empilables (/us shop) : mobs réels, auto-farm, stockage des drops et de l''XP, améliorations, joueurs autorisés, vente automatique.'
+  - 'Crafts à rituel (/vortex rituals) : craftez puis attendez un court moment : l''item apparaît par terre à la fin du rituel.'
+  - Les cooldowns de l'arme en main s'affichent à l'écran (/vortex hud pour les masquer).
+  commands:
+  - /vortex
+  - /vortex list
+  - /vortex preview <item>
+  - /vortex boost
+  - /vortex rituals
+  - /shop
+  - /sell
+  - /orders
+  - /bounty <joueur> <montant>
+  - /us shop
+  - /playtime
+- name: AuthMe
+  icon: lock
+  role: Connexion sécurisée
+  how:
+  - Comptes premium et crack acceptés.
+  - 'Première connexion : créez votre mot de passe avec /register.'
+  - 'Les fois suivantes : connectez-vous avec /login.'
+  commands:
+  - /register <mot de passe> <mot de passe>
+  - /login <mot de passe>
+- name: ExcellentCrates
+  icon: crate
+  role: Caisses et clés
+  how:
+  - Chaque caisse s'ouvre avec une clé. Vos clés sont enregistrées sur votre compte.
+  - Prévisualisez le contenu d'une caisse avant de l'ouvrir ; la récompense est tirée au sort.
+  - Certaines caisses ont un délai entre deux ouvertures.
+  commands:
+  - /crates preview <caisse>
+  - /crates open <caisse>
+  - /crates key inspect
+- name: EternalCombat
+  icon: combat
+  role: Anti combat-log
+  how:
+  - Dès que vous frappez ou êtes frappé, vous entrez en combat pendant quelques secondes.
+  - Pendant le combat, se déconnecter est sanctionné et certaines actions peuvent être bloquées (élytres, inventaire, commandes, pose de blocs
+    selon la configuration).
+  commands:
+  - /combatlog status <joueur>
+- name: Simple Voice Chat
+  icon: mic
+  role: Chat vocal de proximité
+  how:
+  - Installez le mod Simple Voice Chat sur votre client (Fabric, Forge, NeoForge ou Quilt), dans la même version que le serveur.
+  - 'En jeu, appuyez sur V pour ouvrir le menu : micro, volume, groupes.'
+  - 'Vous entendez les joueurs proches de vous. Un groupe permet de parler à distance : /voicechat invite <joueur>.'
+  - Sans le mod, vous jouez normalement mais sans voix.
+  commands:
+  - V (menu)
+  - /voicechat invite <joueur>
+- name: SkinsRestorer
+  icon: skin
+  role: Skins
+  how:
+  - Changez de skin avec /skin set <nom du skin>, ou revenez au vôtre avec /skin clear.
+  commands:
+  - /skin set <nom>
+  - /skin clear
+- name: BoundlessForging
+  icon: anvil
+  role: Enclume sans « Trop cher ! »
+  how:
+  - 'Plus de blocage « Too Expensive » : le coût maximum est ramené à 39 niveaux, et l''opération reste possible.'
+  - 'Rien à faire de plus : utilisez l''enclume normalement.'
+  commands: []
+- name: AxGraves
+  icon: grave
+  role: Tombes à la mort
+  how:
+  - À votre mort, vos objets et votre XP sont rangés dans une tombe, à l'endroit où vous êtes mort.
+  - Retournez sur place pour les récupérer. La tombe est protégée pendant un temps, puis elle expire.
+  commands: []
+- name: Shopkeepers
+  icon: generic
+  role: Boutiques de joueurs (PNJ marchands)
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: ShopkeepersAddon
+  icon: generic
+  role: Extension de Shopkeepers
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: ShopkeeperProtection
+  icon: generic
+  role: Protège les coffres des boutiques
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: FancyNpcs
+  icon: generic
+  role: PNJ du serveur
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: InstantBrew
+  icon: generic
+  role: Brassage
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: SCore
+  icon: generic
+  role: Objets et effets personnalisés
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: CartNerfer
+  icon: generic
+  role: Minecarts
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: ClickVillagers
+  icon: generic
+  role: Villageois
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: EasyVillagerRoll
+  icon: generic
+  role: Villageois
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: EasyStringTripwire
+  icon: generic
+  role: Ficelle et tripwire
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: FasterHoppers
+  icon: generic
+  role: Entonnoirs
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: HappyGhast
+  icon: generic
+  role: Happy Ghast
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: MinerTrack
+  icon: generic
+  role: Suivi du minage
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: SunLight
+  icon: generic
+  role: Utilitaires
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: Tebex
+  icon: generic
+  role: Boutique en ligne
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BetterTeams
+  icon: generic
+  role: Équipes de joueurs
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BetterTeamGUI
+  icon: generic
+  role: Menu des équipes
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BlissGems
+  icon: generic
+  role: Gemmes
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BlissGemsExpansion
+  icon: generic
+  role: Extension de BlissGems
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BlissDragonEgg
+  icon: generic
+  role: Œuf de dragon
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: BlissMythics
+  icon: generic
+  role: Objets mythiques (Bliss)
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: LifeSteal
+  icon: generic
+  role: Cœurs volés au kill
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: Rituals
+  icon: generic
+  role: Rituels
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: SMPCore
+  icon: generic
+  role: Fonctions SMP
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: Votifier
+  icon: generic
+  role: Votes
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+- name: DecentHolograms
+  icon: generic
+  role: Hologrammes
+  verify: true
+  how:
+  - 'À compléter : décrivez ce que ce plugin apporte aux joueurs.'
+  commands: []
+
+# Liste complète des plugins du serveur (capture de /plugins) : affichée telle quelle dans le wiki.
+all_plugins:
+- {name: "BoundlessForging", type: paper, role: "Forge : enclumes et améliorations d'équipement"}
+- {name: "CommandAPI", type: paper, role: "Bibliothèque de commandes (dépendance technique)"}
+- {name: "EternalCombat", type: paper, role: "Combat : étiquette de combat (déconnexion et fuite pénalisées)"}
+- {name: "FancyNpcs", type: paper, role: "PNJ du serveur"}
+- {name: "MiniMOTD", type: paper, role: "Message du serveur dans la liste multijoueur"}
+- {name: "nightcore", type: paper, role: "Bibliothèque des plugins NightExpress (ExcellentCrates, SunLight)"}
+- {name: "PlugManX", type: paper, role: "Gestion des plugins à chaud (staff)"}
+- {name: "AuthMe", type: bukkit, role: "Connexion : /register et /login (comptes premium et crack)"}
+- {name: "AxGraves", type: bukkit, role: "Tombes : récupérez vos items à votre mort"}
+- {name: "BetterTeamGUI", type: bukkit, role: "Menu graphique pour les équipes"}
+- {name: "BetterTeams", type: bukkit, role: "Équipes de joueurs"}
+- {name: "BlissDragonEgg", type: bukkit, role: "Œuf de dragon spécial (gammes Bliss)"}
+- {name: "BlissGems", type: bukkit, role: "Gemmes avec pouvoirs (gammes Bliss)"}
+- {name: "BlissGemsExpansion", type: bukkit, role: "Extension de BlissGems"}
+- {name: "BlissMythics", type: bukkit, role: "Objets mythiques (gammes Bliss)"}
+- {name: "CartNerfer", type: bukkit, role: "Limite les performances des minecarts"}
+- {name: "Chunky", type: bukkit, role: "Préchargement des chunks du monde"}
+- {name: "ChunkyBorder", type: bukkit, role: "Bordure du monde pour Chunky"}
+- {name: "ClickVillagers", type: bukkit, role: "Interaction rapide avec les villageois"}
+- {name: "CoreProtect", type: bukkit, role: "Journal des actions et restauration (staff)"}
+- {name: "DecentHolograms", type: bukkit, role: "Hologrammes du serveur"}
+- {name: "EasyStringTripwire", type: bukkit, role: "Ficelle et tripwire"}
+- {name: "EasyVillagerRoll", type: bukkit, role: "Relance des échanges des villageois"}
+- {name: "ExcellentCrates", type: bukkit, role: "Caisses et clés"}
+- {name: "FasterHoppers", type: bukkit, role: "Optimisation des entonnoirs"}
+- {name: "GrimAC", type: bukkit, role: "Anti-triche"}
+- {name: "HappyGhast", type: bukkit, role: "Réglages du Happy Ghast"}
+- {name: "InstantBrew", type: bukkit, role: "Brassage de potions"}
+- {name: "InventoryRollbackPlus", type: bukkit, role: "Restauration d'inventaires (staff)"}
+- {name: "InvisHider", type: bukkit, role: "Masque l'équipement des joueurs invisibles"}
+- {name: "InvSeePlusPlus", type: bukkit, role: "Voir et modifier l'inventaire d'un joueur (staff)"}
+- {name: "LifeSteal", type: bukkit, role: "Cœurs gagnés et perdus avec les kills"}
+- {name: "LightBans", type: bukkit, role: "Sanctions : bans, mutes, kicks"}
+- {name: "LuckPerms", type: bukkit, role: "Permissions et grades"}
+- {name: "MinerTrack", type: bukkit, role: "Suivi du minage (détection de x-ray, staff)"}
+- {name: "Orebfuscator", type: bukkit, role: "Anti-xray : masque les minerais cachés"}
+- {name: "packetevents", type: bukkit, role: "Bibliothèque de paquets (dépendance technique)"}
+- {name: "PlaceholderAPI", type: bukkit, role: "Variables pour les autres plugins"}
+- {name: "ProtocolLib", type: bukkit, role: "Bibliothèque de paquets (dépendance technique)"}
+- {name: "Rituals", type: bukkit, role: "Rituels"}
+- {name: "SCore", type: bukkit, role: "Objets et effets personnalisés"}
+- {name: "ShopkeeperProtection", type: bukkit, role: "Protège les coffres des boutiques de joueurs"}
+- {name: "Shopkeepers", type: bukkit, role: "Boutiques de joueurs avec PNJ marchands"}
+- {name: "ShopkeepersAddon", type: bukkit, role: "Extension de Shopkeepers"}
+- {name: "SkinsRestorer", type: bukkit, role: "Skins pour les comptes crack"}
+- {name: "SMPCore", type: bukkit, role: "Fonctions du SMP"}
+- {name: "SunLight", type: bukkit, role: "Utilitaires (NightExpress)"}
+- {name: "Tebex", type: bukkit, role: "Boutique en ligne du serveur"}
+- {name: "Vault", type: bukkit, role: "Lien entre l'économie et les plugins"}
+- {name: "ViaBackwards", type: bukkit, role: "Connexion avec des versions plus anciennes"}
+- {name: "ViaVersion", type: bukkit, role: "Connexion avec des versions plus récentes"}
+- {name: "voicechat", type: bukkit, role: "Simple Voice Chat : discussion vocale de proximité"}
+- {name: "VortexEssentials", type: bukkit, role: "Items custom, armes, boutique, commandes, primes, spawners, rituels"}
+- {name: "Votifier", type: bukkit, role: "Réception des votes"}
+- {name: "WorldEdit", type: bukkit, role: "Édition de terrain (staff)"}
+- {name: "WorldGuard", type: bukkit, role: "Protection de zones"}
