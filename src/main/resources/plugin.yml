@@ -1,0 +1,21 @@
+name: KingdomSMP
+version: 0.5.2
+main: fr.itsvany.kingdomsmp.KingdomSMP
+api-version: '1.21'
+author: ItsVanyy
+description: Couronnes, pouvoirs et progression pour KingdomSMP.
+softdepend: [Vault, BetterTeams, WorldGuard]
+commands:
+  kingdom:
+    description: Commande principale KingdomSMP
+    aliases: [ksmp, crown]
+    usage: /kingdom [menu|help|me|profile|powers|cast|language|trust|crown|ritual|item|pact|remove|events|save|reload|status]
+permissions:
+  kingdomsmp.use:
+    default: true
+  kingdomsmp.admin:
+    default: op
+  kingdomsmp.ritual:
+    default: true
+  kingdomsmp.powers:
+    default: true
